@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="374.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programutvikling.controllers.mainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programutvikling.controllers.mainController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -37,18 +37,22 @@
         </menus>
       </MenuBar>
    </top>
-   <left>
-      <TableView fx:id="tblKomponent" prefHeight="311.0" prefWidth="152.0" BorderPane.alignment="CENTER">
+   <bottom>
+      <TableView fx:id="tblKomponent" prefHeight="215.0" prefWidth="520.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn fx:id="ColumnKomponent" prefWidth="75.0" text="Komponent" />
-          <TableColumn fx:id="ColumnProdusent" prefWidth="75.0" text="Produsent" />
+          <TableColumn fx:id="ColumnKomponent" prefWidth="72.0" text="Komponent" />
+          <TableColumn fx:id="ColumnProdusent" prefWidth="67.0" text="Produsent" />
+            <TableColumn fx:id="ColumnVekt" prefWidth="45.0" text="Vekt" />
+            <TableColumn fx:id="ColumnVersjon" prefWidth="58.0" text="Versjon" />
+            <TableColumn fx:id="ColumnLansert" prefWidth="67.0" text="Lansert" />
+            <TableColumn fx:id="ColumnPris" prefWidth="71.0" text="Pris" />
         </columns>
       </TableView>
-   </left>
-   <right>
-      <AnchorPane prefHeight="309.0" prefWidth="369.0" BorderPane.alignment="CENTER">
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="290.0" prefWidth="405.0" BorderPane.alignment="CENTER">
          <children>
-            <GridPane layoutX="15.0" layoutY="13.0" prefHeight="226.0" prefWidth="300.0">
+            <GridPane layoutX="15.0" layoutY="13.0" prefHeight="196.0" prefWidth="300.0">
                <children>
                   <Label text="Komponent" />
                   <Label text="Produsent" GridPane.rowIndex="1" />
@@ -76,10 +80,10 @@
                   <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
                </rowConstraints>
             </GridPane>
-            <Button layoutX="256.0" layoutY="247.0" mnemonicParsing="false" onAction="#registrerKomponent" text="Legg til" />
-            <Button layoutX="206.0" layoutY="247.0" mnemonicParsing="false" onAction="#slettKomponent" text="Slett" />
-            <Button layoutX="138.0" layoutY="247.0" mnemonicParsing="false" onAction="#redigerKomponent" text="Rediger" />
+            <Button layoutX="257.0" layoutY="209.0" mnemonicParsing="false" onAction="#registrerKomponent" text="Legg til" />
+            <Button layoutX="206.0" layoutY="209.0" mnemonicParsing="false" onAction="#slettKomponent" text="Slett" />
+            <Button layoutX="138.0" layoutY="209.0" mnemonicParsing="false" onAction="#redigerKomponent" text="Rediger" />
          </children>
       </AnchorPane>
-   </right>
+   </center>
 </BorderPane>

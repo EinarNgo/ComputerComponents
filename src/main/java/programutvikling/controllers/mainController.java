@@ -25,6 +25,14 @@ public class mainController {
     @FXML
     private TableColumn<Component, String> ColumnProdusent;
     @FXML
+    private TableColumn<Component, String> ColumnVekt;
+    @FXML
+    private TableColumn<Component, String> ColumnVersjon;
+    @FXML
+    private TableColumn<Component, String> ColumnLanser;
+    @FXML
+    private TableColumn<Component, String> ColumnPris;
+    @FXML
     private TextField txtKomponent,txtProdusent,txtVekt,txtVersjon,txtPris;
     @FXML
     private DatePicker txtLansert;
@@ -156,6 +164,10 @@ public class mainController {
 
         ColumnKomponent.setCellValueFactory(cellData -> cellData.getValue().komponentProperty());
         ColumnProdusent.setCellValueFactory(cellData -> cellData.getValue().produsentProperty());
+        //ColumnVekt.setCellValueFactory(cellData -> cellData.getValue().vektProperty());
+        ColumnVersjon.setCellValueFactory(cellData -> cellData.getValue().versjonProperty());
+       // ColumnLanser.setCellValueFactory(cellData -> cellData.getValue().lansertProperty());
+        //ColumnPris.setCellValueFactory(cellData -> cellData.getValue().prisProperty());
         // Clear person details.
         showKomponent(null);
 
