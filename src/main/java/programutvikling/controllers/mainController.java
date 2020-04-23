@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
@@ -43,9 +44,9 @@ public class mainController {
     public mainController() {
         // Add some sample data.
 
-        cData.add(new Component("Prossesor","Asus","50g","10.10","20.10.2018",8000));
-        cData.add(new Component("Harddisk","Kingston","400g","12.2","2.2.2010",2000));
-        cData.add(new Component("Ram","Rex","100g","12.23","3.3.2003",500));
+        cData.add(new Component("Prossesor","Asus",50,"10.10","20.10.2018",8000));
+        cData.add(new Component("Harddisk","Kingston",400,"12.2","2.2.2010",2000));
+        cData.add(new Component("Ram","Rex",100,"12.23","3.3.2003",500));
     }
 
     @FXML
@@ -58,14 +59,19 @@ public class mainController {
             // Fill the labels with info from the person object.
             txtKomponent.setText(component.getKomponent());
             txtProdusent.setText(component.getProdusent());
-            txtVekt.setText(component.getVekt());
+            txtVekt.setText(Integer.toString(component.getVekt()));
             txtVersjon.setText(component.getVersjon());
+            //txtLansert.setText(component.getLanser());
+            txtPris.setText(Integer.toString(component.getPris()));
+
         } else {
             // Person is null, remove all the text.
             txtKomponent.setText("");
             txtProdusent.setText("");
             txtVekt.setText("");
             txtVersjon.setText("");
+            //txtLansert.setText("");
+            txtPris.setText("");
         }
     }
 
@@ -162,12 +168,13 @@ public class mainController {
 
     public void update() {
 
+
         ColumnKomponent.setCellValueFactory(cellData -> cellData.getValue().komponentProperty());
         ColumnProdusent.setCellValueFactory(cellData -> cellData.getValue().produsentProperty());
-        //ColumnVekt.setCellValueFactory(cellData -> cellData.getValue().vektProperty());
+        ColumnVekt.setCellValueFactory(cellData -> cellData.getValue().vektProperty().asString());
         ColumnVersjon.setCellValueFactory(cellData -> cellData.getValue().versjonProperty());
-       // ColumnLanser.setCellValueFactory(cellData -> cellData.getValue().lansertProperty());
-        //ColumnPris.setCellValueFactory(cellData -> cellData.getValue().prisProperty());
+        //ColumnLanser.setCellValueFactory(cellData -> cellData.getValue().lansertProperty());
+        ColumnPris.setCellValueFactory(cellData -> cellData.getValue().prisProperty().asString());
         // Clear person details.
         showKomponent(null);
 

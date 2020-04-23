@@ -30,8 +30,9 @@ public class registerController {
 
         Komponent.setKomponent(txtKomponent.getText());
         Komponent.setProdusent(txtProdusent.getText());
-        Komponent.setVekt(txtVekt.getText());
+        Komponent.setVekt(Integer.parseInt(txtVekt.getText()));
         Komponent.setVersjon(txtVersjon.getText());
+        Komponent.setPris(Integer.parseInt(txtPris.getText()));
 
         closeWindow();
 

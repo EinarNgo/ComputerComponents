@@ -8,19 +8,19 @@ import javafx.beans.property.StringProperty;
 public class Component {
     public final StringProperty komponent;
     public final StringProperty produsent;
-    public final StringProperty vekt;
+    public final IntegerProperty vekt;
     public final StringProperty versjon;
     public final StringProperty lansert;
     public final IntegerProperty pris;
 
     public Component() {
-        this(null,null,null,null,null,0);
+        this(null,null,0,null,null,0);
     }
 
-    public Component(String komponent, String produsent, String vekt, String versjon, String lanser , int pris){
+    public Component(String komponent, String produsent, int vekt, String versjon, String lanser , int pris){
         this.komponent = new SimpleStringProperty(komponent);
         this.produsent = new SimpleStringProperty(produsent);
-        this.vekt = new SimpleStringProperty(vekt);
+        this.vekt = new SimpleIntegerProperty(vekt);
         this.versjon = new SimpleStringProperty(versjon);
         this.lansert = new SimpleStringProperty(lanser);
         this.pris = new SimpleIntegerProperty(pris);
@@ -50,15 +50,15 @@ public class Component {
         this.produsent.set(produsent);
     }
 
-    public String getVekt() {
+    public int getVekt() {
         return vekt.get();
     }
 
-    public StringProperty vektProperty() {
+    public IntegerProperty vektProperty() {
         return vekt;
     }
 
-    public void setVekt(String vekt) {
+    public void setVekt(int vekt) {
         this.vekt.set(vekt);
     }
 

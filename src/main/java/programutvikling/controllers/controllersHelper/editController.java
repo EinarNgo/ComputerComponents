@@ -1,5 +1,6 @@
 package programutvikling.controllers.controllersHelper;
 
+import javafx.beans.property.IntegerProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -22,8 +23,9 @@ public class editController {
 
         txtKomponent.setText(Komponent.getKomponent());
         txtProdusent.setText(Komponent.getProdusent());
-        txtVekt.setText(Komponent.getProdusent());
+        //txtVekt.setText(Integer.parseInt(Komponent.getVekt()));
         txtVersjon.setText(Komponent.getVersjon());
+        //txtPris.setText(Komponent.getPris());
     }
 
 
@@ -31,8 +33,9 @@ public class editController {
     private void editKomponent() {
         Komponent.setKomponent(txtKomponent.getText());
         Komponent.setProdusent(txtProdusent.getText());
-        Komponent.setVekt(txtVekt.getText());
+        Komponent.setVekt(Integer.parseInt(txtVekt.getText()));
         Komponent.setVersjon(txtVersjon.getText());
+        Komponent.setPris(Integer.parseInt(txtPris.getText()));
 
         closeWindow();
     }
