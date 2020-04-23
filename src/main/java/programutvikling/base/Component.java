@@ -13,9 +13,11 @@ public class Component {
     public final StringProperty lansert;
     public final IntegerProperty pris;
 
+    
     public Component() {
         this(null,null,0,null,null,0);
     }
+
 
     public Component(String komponent, String produsent, int vekt, String versjon, String lanser , int pris){
         this.komponent = new SimpleStringProperty(komponent);

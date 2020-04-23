@@ -23,9 +23,9 @@ public class editController {
 
         txtKomponent.setText(Komponent.getKomponent());
         txtProdusent.setText(Komponent.getProdusent());
-        //txtVekt.setText(Integer.parseInt(Komponent.getVekt()));
+        txtVekt.setText(Integer.toString(Komponent.getVekt()));
         txtVersjon.setText(Komponent.getVersjon());
-        //txtPris.setText(Komponent.getPris());
+        txtPris.setText(Integer.toString(Komponent.getVekt()));
     }
 
 
