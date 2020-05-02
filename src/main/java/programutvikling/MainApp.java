@@ -19,12 +19,12 @@ public class MainApp extends Application{
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("mainView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("startView.fxml"));
 
         Scene scene = new Scene(root);
         //scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
 
-        stage.setTitle("Adminpanel");
+        stage.setTitle("Startpanel");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

@@ -8,7 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
@@ -17,7 +16,7 @@ import programutvikling.controllers.controllersHelper.registerController;
 
 import java.io.IOException;
 
-public class mainController {
+public class adminController {
 
     @FXML
     private TableView<Component> tblKomponent;
@@ -41,7 +40,7 @@ public class mainController {
     private ObservableList<Component> cData = FXCollections.observableArrayList();
 
 
-    public mainController() {
+    public adminController() {
         // Add some sample data.
 
         cData.add(new Component("Prossesor","Asus",50,"10.10","20.10.2018",8000));
@@ -167,7 +166,6 @@ public class mainController {
     }
 
     public void update() {
-
 
         ColumnKomponent.setCellValueFactory(cellData -> cellData.getValue().komponentProperty());
         ColumnProdusent.setCellValueFactory(cellData -> cellData.getValue().produsentProperty());
