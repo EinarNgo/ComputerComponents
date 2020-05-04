@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -13,8 +13,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import java.lang.String?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programutvikling.controllers.adminController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
@@ -38,26 +41,49 @@
       </MenuBar>
    </top>
    <bottom>
-      <TableView fx:id="tblKomponent" prefHeight="215.0" prefWidth="520.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tblKomponent" prefHeight="215.0" prefWidth="334.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn fx:id="ColumnKomponent" prefWidth="72.0" text="Komponent" />
-          <TableColumn fx:id="ColumnProdusent" prefWidth="67.0" text="Produsent" />
-            <TableColumn fx:id="ColumnVekt" prefWidth="45.0" text="Vekt" />
-            <TableColumn fx:id="ColumnVersjon" prefWidth="58.0" text="Versjon" />
-            <TableColumn fx:id="ColumnLansert" prefWidth="67.0" text="Lansert" />
-            <TableColumn fx:id="ColumnPris" prefWidth="71.0" text="Pris" />
+          <TableColumn fx:id="ColumnKomponent" prefWidth="72.0" text="Komponent" >
+              <cellValueFactory>
+                  <PropertyValueFactory property="komponent" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="ColumnProdusent" prefWidth="67.0" text="Produsent" >
+              <cellValueFactory>
+                  <PropertyValueFactory property="produsent" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="ColumnVekt" prefWidth="45.0" text="Vekt" >
+              <cellValueFactory>
+                  <PropertyValueFactory property="vekt" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="ColumnVersjon" prefWidth="58.0" text="Versjon" >
+              <cellValueFactory>
+                  <PropertyValueFactory property="versjon" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="ColumnLansert" prefWidth="67.0" text="Lansert" >
+              <cellValueFactory>
+                  <PropertyValueFactory property="lansert" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="ColumnPris" prefWidth="71.0" text="Pris" >
+              <cellValueFactory>
+                  <PropertyValueFactory property="pris" />
+              </cellValueFactory>
+          </TableColumn>
         </columns>
       </TableView>
    </bottom>
    <center>
       <AnchorPane prefHeight="290.0" prefWidth="405.0" BorderPane.alignment="CENTER">
          <children>
-            <GridPane layoutX="15.0" layoutY="13.0" prefHeight="196.0" prefWidth="300.0">
+            <GridPane fx:id="registrationBox" layoutX="15.0" layoutY="13.0" prefHeight="196.0" prefWidth="300.0">
                <children>
                   <Label text="Komponent" />
                   <Label text="Produsent" GridPane.rowIndex="1" />
                   <Label text="Versjon" GridPane.rowIndex="3" />
-                  <DatePicker fx:id="txtLansert" editable="false" prefHeight="27.0" prefWidth="293.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <TextField fx:id="txtProdusent" editable="false" prefHeight="27.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="txtVersjon" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <Label text="Lansert" GridPane.rowIndex="4" />
@@ -66,6 +92,7 @@
                   <TextField fx:id="txtKomponent" editable="false" GridPane.columnIndex="1" />
                   <Label text="Vekt" GridPane.rowIndex="2" />
                   <TextField fx:id="txtVekt" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtLansert" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="121.0" />
@@ -83,6 +110,20 @@
             <Button layoutX="257.0" layoutY="209.0" mnemonicParsing="false" onAction="#registrerKomponent" text="Legg til" />
             <Button layoutX="206.0" layoutY="209.0" mnemonicParsing="false" onAction="#slettKomponent" text="Slett" />
             <Button layoutX="138.0" layoutY="209.0" mnemonicParsing="false" onAction="#redigerKomponent" text="Rediger" />
+            <HBox alignment="CENTER" layoutX="4.0" layoutY="277.0" prefHeight="20.0" prefWidth="374.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="txtSok" onKeyTyped="#searchTxtEntered" promptText="Søk" />
+                  <Label text="Filtering" />
+                  <ChoiceBox fx:id="kategoriFilter" prefHeight="25.0" prefWidth="105.0" onAction="#filterChoiceChanged">
+                      <String fx:value="Komponent" />
+                      <String fx:value="Produsent" />
+                      <String fx:value="Vekt" />
+                      <String fx:value="Versjon" />
+                      <String fx:value="Lansert" />
+                      <String fx:value="Pris" />
+                  </ChoiceBox>
+               </children>
+            </HBox>
          </children>
       </AnchorPane>
    </center>

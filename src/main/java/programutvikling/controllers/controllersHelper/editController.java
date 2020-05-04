@@ -15,7 +15,7 @@ public class editController {
     private TextField txtKomponent,txtProdusent,txtVekt,txtVersjon,txtPris;
 
     @FXML
-    private DatePicker txtLansert;
+    private TextField txtLansert;
 
 
     public void setKomponent(Component Komponent) {
@@ -25,7 +25,8 @@ public class editController {
         txtProdusent.setText(Komponent.getProdusent());
         txtVekt.setText(Integer.toString(Komponent.getVekt()));
         txtVersjon.setText(Komponent.getVersjon());
-        txtPris.setText(Integer.toString(Komponent.getVekt()));
+        txtLansert.setText(Komponent.getLanser());
+        txtPris.setText(Integer.toString(Komponent.getPris()));
     }
 
 
@@ -35,6 +36,7 @@ public class editController {
         Komponent.setProdusent(txtProdusent.getText());
         Komponent.setVekt(Integer.parseInt(txtVekt.getText()));
         Komponent.setVersjon(txtVersjon.getText());
+        Komponent.setLansert(txtLansert.getText());
         Komponent.setPris(Integer.parseInt(txtPris.getText()));
 
         closeWindow();

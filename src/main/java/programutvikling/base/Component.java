@@ -5,7 +5,12 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class Component {
+import java.io.Serializable;
+
+public class Component implements Serializable {
+
+    private static final long serialVersionUID = 1;
+
     public final StringProperty komponent;
     public final StringProperty produsent;
     public final IntegerProperty vekt;
@@ -13,10 +18,6 @@ public class Component {
     public final StringProperty lansert;
     public final IntegerProperty pris;
 
-    
-    public Component() {
-        this(null,null,0,null,null,0);
-    }
 
 
     public Component(String komponent, String produsent, int vekt, String versjon, String lanser , int pris){
