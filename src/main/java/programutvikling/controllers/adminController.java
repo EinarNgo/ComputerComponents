@@ -122,18 +122,14 @@ public class adminController {
     @FXML
     private void registrerKomponent() {
         Parent root = null;
-        //Component tempKomponent;
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/registerKundeScene.fxml").openStream());
 
             registerController controller = fxmlLoader.getController();
-            //tempKomponent = new Component(null,null,0,null,null,0);
 
             controller.setKomponent(cRegister);
-
-            //cRegister.addComponent(tempKomponent);
 
         } catch (IOException e) {
             e.printStackTrace(); // FXML document should be available
@@ -220,7 +216,6 @@ public class adminController {
             case "pris" : try {
                 result = cRegister.filterByPris(Integer.parseInt(txtSok.getText()));
             } catch (NumberFormatException e) {} break; // suppress exception
-
 
         }
 
