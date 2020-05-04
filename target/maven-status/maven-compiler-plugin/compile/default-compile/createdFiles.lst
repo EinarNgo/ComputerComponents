@@ -1,0 +1,13 @@
+programutvikling\base\InvalidAgeException.class
+programutvikling\controllers\helpers\inputChecker.class
+programutvikling\MainApp.class
+programutvikling\controllers\controllersHelper\registerController.class
+programutvikling\controllers\startController.class
+module-info.class
+programutvikling\controllers\controllersHelper\editController.class
+programutvikling\base\Component.class
+programutvikling\controllers\helpers\InvalidInputHandler.class
+programutvikling\controllers\adminController.class
+programutvikling\controllers\helpers\applicationCleaner.class
+programutvikling\controllers\helpers\FileExceptionHandler.class
+programutvikling\controllers\userController.class
