@@ -122,20 +122,18 @@ public class adminController {
     @FXML
     private void registrerKomponent() {
         Parent root = null;
-        Component tempKomponent;
+        //Component tempKomponent;
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
             root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/registerKundeScene.fxml").openStream());
 
             registerController controller = fxmlLoader.getController();
-            tempKomponent = new Component(null,null,0,null,null,0);
+            //tempKomponent = new Component(null,null,0,null,null,0);
 
-            controller.setKomponent(tempKomponent);
+            controller.setKomponent(cRegister);
 
-            if(tempKomponent != null) {
-                cRegister.addComponent(tempKomponent);
-            }
+            //cRegister.addComponent(tempKomponent);
 
         } catch (IOException e) {
             e.printStackTrace(); // FXML document should be available
