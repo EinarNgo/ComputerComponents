@@ -33,9 +33,11 @@ public class adminController {
     @FXML
     private TableColumn<Component, String> ColumnPris;
     @FXML
-    private TextField txtKomponent,txtProdusent,txtVekt,txtVersjon,txtPris;
+    private TextField txtKomponent,txtProdusent,txtVekt,txtVersjon,txtPris,txtSok;
     @FXML
     private DatePicker txtLansert;
+    @FXML
+    ChoiceBox<String> kategoriFilter;
 
     private ObservableList<Component> cData = FXCollections.observableArrayList();
 

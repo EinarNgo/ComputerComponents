@@ -20,25 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="690d8b4d-8996-4494-bbb8-94c60f20b59e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ProgSemesteroppgave.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/base/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/base/Component.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/base/InvalidAgeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/base/InvalidAgeException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/adminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/adminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/editController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/editController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/registerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/registerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/FileExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/FileExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/InvalidInputHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/InvalidInputHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/applicationCleaner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/applicationCleaner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/inputChecker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/inputChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/startController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/startController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/userController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/adminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,28 +54,29 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588384520849" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Personregister" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/programutvikling" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.2675" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="programutvikling.controllers" />
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="programutvikling" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\resources\programutvikling" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$/src/main/resources/programutvikling" />
       <recent name="$PROJECT_DIR$/src/main/java/programutvikling" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="programutvikling" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
   <component name="RunManager" selected="Application.MainApp">
