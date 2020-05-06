@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
@@ -27,9 +28,14 @@ public class userController {
     ChoiceBox<String> choiceCase, choiceMotherboard, choiceProsessor, choiceRam, choiceHarddisk, choicePower;
     private ComponentRegister cRegister = new ComponentRegister();
 
+    private String summaryText = "Componentlist:";
+
+    @FXML
+    TextArea txtText;
+
     public userController() {
-        System.out.println(cRegister.getRegister().size());
     }
+
     @FXML
     private void initialize() {
         fillChoicebox("Case",choiceCase);
@@ -38,10 +44,25 @@ public class userController {
         fillChoicebox("Ram",choiceRam);
         fillChoicebox("Harddisk",choiceHarddisk);
         fillChoicebox("Power",choicePower);
+
     }
 
+    @FXML
+    private void test() {
+        summaryText(choiceCase.getValue());
+        summaryText(choiceProsessor.getValue());
+        summaryText(choiceMotherboard.getValue());
+        summaryText(choiceRam.getValue());
+        summaryText(choiceHarddisk.getValue());
+        summaryText(choicePower.getValue());
+
+        System.out.println(choiceCase.getValue());
+        txtText.setText(summaryText);
+    }
+
+
+
     private void fillChoicebox(String item, ChoiceBox cBox) {
-        cBox.setValue("Empty");
         List<Component> test = cRegister.searchRegisterByName(item);
         ObservableList<String> temp = FXCollections.observableArrayList();
         temp.add("Components");
@@ -51,5 +72,12 @@ public class userController {
 
         cBox.setItems(temp);
         cBox.setValue("Components");
+    }
+
+    private void summaryText(String text) {
+        List<Component> test = cRegister.searchRegisterByName(text);
+        for (Component i : test) {
+            summaryText += "\n" + i.getKomponent() + ": " + i.getNavn();
+        }
     }
 }
