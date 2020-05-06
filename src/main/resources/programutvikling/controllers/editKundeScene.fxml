@@ -13,17 +13,17 @@
       <GridPane layoutX="25.0" layoutY="23.0" prefHeight="226.0" prefWidth="300.0">
          <children>
             <Label text="Komponent" />
-            <Label text="Produsent" GridPane.rowIndex="1" />
-            <Label text="Versjon" GridPane.rowIndex="3" />
-            <TextField fx:id="txtProdusent" prefHeight="27.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="txtVersjon" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Label text="Lansert" GridPane.rowIndex="4" />
+            <Label text="Produsent" GridPane.rowIndex="2" />
+            <Label text="Versjon" GridPane.rowIndex="4" />
+            <TextField fx:id="txtProdusent" prefHeight="27.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtLansert" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Navn" GridPane.rowIndex="1" />
             <Label text="Pris" GridPane.rowIndex="5" />
             <TextField fx:id="txtPris" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField fx:id="txtKomponent" GridPane.columnIndex="1" />
-            <Label text="Vekt" GridPane.rowIndex="2" />
-            <TextField fx:id="txtVekt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtLansert" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Vekt" GridPane.rowIndex="3" />
+            <TextField fx:id="txtVekt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtNavn" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="121.0" />

@@ -12,39 +12,19 @@ public class registerController {
     private ComponentRegister cRegister;
 
     @FXML
-    private TextField txtKomponent,txtProdusent,txtVekt,txtVersjon,txtPris;
+    private TextField txtKomponent,txtNavn,txtProdusent,txtVekt,txtPris;
 
     @FXML
     private TextField txtLansert;
 
     public void setKomponent(ComponentRegister cRegister) {
         this.cRegister = cRegister;
-
-        /*
-        txtKomponent.setText(Komponent.getKomponent());
-        txtProdusent.setText(Komponent.getProdusent());
-        txtVekt.setText(Integer.toString(Komponent.getVekt()));
-        txtVersjon.setText(Komponent.getVersjon());
-        txtLansert.setText(Komponent.getLanser());
-        txtPris.setText(Integer.toString(Komponent.getPris()));
-
-         */
     }
 
     @FXML
     private void registerKomponent() {
         boolean temp = true;
-        /*
-        Component Komponent = new Component(null,null,0,null,null,0);
 
-        Komponent.setKomponent(txtKomponent.getText());
-        Komponent.setProdusent(txtProdusent.getText());
-        Komponent.setVekt(Integer.parseInt(txtVekt.getText()));
-        Komponent.setVersjon(txtVersjon.getText());
-        Komponent.setLansert(txtLansert.getText());
-        Komponent.setPris(Integer.parseInt(txtPris.getText()));
-
-         */
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.initOwner(txtKomponent.getScene().getWindow());
         alert.setTitle("Wrong input");
@@ -78,7 +58,7 @@ public class registerController {
 
     private Component createComponent() {
 
-        return new Component(txtKomponent.getText(), txtProdusent.getText(), Integer.parseInt(txtVekt.getText()), txtVersjon.getText(), null,Integer.parseInt(txtPris.getText()));
+        return new Component(txtKomponent.getText(), txtNavn.getText() ,txtProdusent.getText(),Integer.parseInt(txtVekt.getText()), txtLansert.getText(),Integer.parseInt(txtPris.getText()));
     }
 
     private void closeWindow() {

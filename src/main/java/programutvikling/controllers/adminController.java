@@ -24,25 +24,23 @@ public class adminController {
     @FXML
     private TableColumn<Component, String> ColumnKomponent;
     @FXML
+    private TableColumn<Component, String> ColumnNavn;
+    @FXML
     private TableColumn<Component, String> ColumnProdusent;
     @FXML
     private TableColumn<Component, String> ColumnVekt;
-    @FXML
-    private TableColumn<Component, String> ColumnVersjon;
     @FXML
     private TableColumn<Component, String> ColumnLansert;
     @FXML
     private TableColumn<Component, String> ColumnPris;
     @FXML
-    private TextField txtKomponent,txtProdusent,txtVekt,txtVersjon,txtPris,txtSok;
+    private TextField txtKomponent,txtNavn,txtProdusent,txtVekt,txtPris,txtSok;
     @FXML
     private TextField txtLansert;
     @FXML
     ChoiceBox<String> kategoriFilter;
     @FXML
     GridPane registrationBox;
-
-    //private ObservableList<Component> cData = FXCollections.observableArrayList();
 
     private ComponentRegister cRegister = new ComponentRegister();
     private RegistrerComponent registrerComponent;
@@ -51,13 +49,7 @@ public class adminController {
     public adminController() {
         // Add some sample data.
 
-
-        cRegister.addComponent(new Component("Prossesor","Asus",50,"10.10","20.10.2018",8000));
-        cRegister.addComponent(new Component("Harddisk","Kingston",400,"12.2","2.2.2010",2000));
-        cRegister.addComponent(new Component("Ram","Rex",100,"12.23","3.3.2003",500));
-
     }
-
     @FXML
     private void initialize() {
         updateComponentList();
@@ -65,19 +57,16 @@ public class adminController {
 
 
         ColumnKomponent.setCellValueFactory(cellData -> cellData.getValue().komponentProperty());
+        ColumnNavn.setCellValueFactory(cellData -> cellData.getValue().navnProperty());
         ColumnProdusent.setCellValueFactory(cellData -> cellData.getValue().produsentProperty());
         ColumnVekt.setCellValueFactory(cellData -> cellData.getValue().vektProperty().asString());
-        ColumnVersjon.setCellValueFactory(cellData -> cellData.getValue().versjonProperty());
         ColumnLansert.setCellValueFactory(cellData -> cellData.getValue().lansertProperty());
         ColumnPris.setCellValueFactory(cellData -> cellData.getValue().prisProperty().asString());
 
         showKomponent(null);
 
-        // Listen for selection changes and show the person details when changed.
         tblKomponent.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showKomponent(newValue));
-
-        //tblKomponent.setItems(cRegister);
     }
 
     private void updateComponentList() {
@@ -104,16 +93,16 @@ public class adminController {
         if (component != null) {
             // Fill the labels with info from the person object.
             txtKomponent.setText(component.getKomponent());
+            txtNavn.setText(component.getNavn());
             txtProdusent.setText(component.getProdusent());
             txtVekt.setText(Integer.toString(component.getVekt()));
-            txtVersjon.setText(component.getVersjon());
             txtLansert.setText(component.getLanser());
             txtPris.setText(Integer.toString(component.getPris()));
         } else {
             txtKomponent.setText("");
+            txtNavn.setText("");
             txtProdusent.setText("");
             txtVekt.setText("");
-            txtVersjon.setText("");
             txtLansert.setText("");
             txtPris.setText("");
         }
@@ -207,16 +196,15 @@ public class adminController {
         ObservableList<Component> result = null;
         switch (kategoriFilter.getValue().toLowerCase()) {
             case "komponent" : result = cRegister.filterByComponent(txtSok.getText()); break;
+            case "navn" : result = cRegister.filterByNavn(txtSok.getText()); break;
             case "produsent" : result = cRegister.filterByProdusent(txtSok.getText()); break;
             case "vekt" : try {
                 result = cRegister.filterByVekt(Integer.parseInt(txtSok.getText()));
             } catch (NumberFormatException e) {} break; // suppress exception
-            case "versjon" : result = cRegister.filterByVersjon(txtSok.getText()); break;
             case "lansert" : result = cRegister.filterByLansert(txtSok.getText()); break;
             case "pris" : try {
                 result = cRegister.filterByPris(Integer.parseInt(txtSok.getText()));
             } catch (NumberFormatException e) {} break; // suppress exception
-
         }
 
         if(result == null) {

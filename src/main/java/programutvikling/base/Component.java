@@ -12,19 +12,19 @@ public class Component implements Serializable {
     private static final long serialVersionUID = 1;
 
     public final StringProperty komponent;
+    public final StringProperty navn;
     public final StringProperty produsent;
     public final IntegerProperty vekt;
-    public final StringProperty versjon;
     public final StringProperty lansert;
     public final IntegerProperty pris;
 
 
 
-    public Component(String komponent, String produsent, int vekt, String versjon, String lanser , int pris){
+    public Component(String komponent, String navn,String produsent, int vekt, String lanser, int pris){
         this.komponent = new SimpleStringProperty(komponent);
+        this.navn = new SimpleStringProperty(navn);
         this.produsent = new SimpleStringProperty(produsent);
         this.vekt = new SimpleIntegerProperty(vekt);
-        this.versjon = new SimpleStringProperty(versjon);
         this.lansert = new SimpleStringProperty(lanser);
         this.pris = new SimpleIntegerProperty(pris);
     }
@@ -39,6 +39,18 @@ public class Component implements Serializable {
 
     public void setKomponent(String komponent) {
         this.komponent.set(komponent);
+    }
+
+    public String getNavn() {
+        return navn.get();
+    }
+
+    public StringProperty navnProperty() {
+        return navn;
+    }
+
+    public void setNavn(String navn) {
+        this.navn.set(navn);
     }
 
     public String getProdusent() {
@@ -63,18 +75,6 @@ public class Component implements Serializable {
 
     public void setVekt(int vekt) {
         this.vekt.set(vekt);
-    }
-
-    public String getVersjon() {
-        return versjon.get();
-    }
-
-    public StringProperty versjonProperty() {
-        return versjon;
-    }
-
-    public void setVersjon(String versjon) {
-        this.versjon.set(versjon);
     }
 
     public String getLanser() {
