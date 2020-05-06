@@ -46,17 +46,10 @@ public class userController {
         ObservableList<String> temp = FXCollections.observableArrayList();
         temp.add("Components");
         for (Component i : test) {
-            System.out.println(i.getNavn());
             temp.add(i.getNavn());
         }
+
         cBox.setItems(temp);
         cBox.setValue("Components");
     }
-
-    private void filter() {
-        ObservableList<Component> result = null;
-        result = cRegister.filterByComponenttest("Kabinet");
-
-    }
-    
 }

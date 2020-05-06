@@ -21,28 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="690d8b4d-8996-4494-bbb8-94c60f20b59e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/base/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/ComponentRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/ComponentRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/RegistrerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/RegistrerComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/adminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/editController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/editController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/registerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/userController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/controllers/editKundeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/controllers/editKundeScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/controllers/registerKundeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/controllers/registerKundeScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/userView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/userView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/adminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/adminView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/base/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/base/Component.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/ComponentRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/ComponentRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/RegistrerComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/RegistrerComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/adminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/adminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/editController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/editController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/registerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/registerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/editKundeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/editKundeScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/registerKundeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/registerKundeScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/userController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/userView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/userView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,28 +213,28 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588593151266" />
-    <state width="1105" height="216" key="GridCell.Tab.0.bottom" timestamp="1588768954984">
+    <state width="1105" height="216" key="GridCell.Tab.0.bottom" timestamp="1588796664432">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1105" height="216" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588768954984" />
+    <state width="1105" height="216" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588796664432" />
     <state width="1340" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939800" />
     <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1105" height="216" key="GridCell.Tab.0.center" timestamp="1588768954984">
+    <state width="1105" height="216" key="GridCell.Tab.0.center" timestamp="1588796664431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1105" height="216" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588768954984" />
+    <state width="1105" height="216" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588796664431" />
     <state width="1340" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1105" height="216" key="GridCell.Tab.0.left" timestamp="1588768954984">
+    <state width="1105" height="216" key="GridCell.Tab.0.left" timestamp="1588796664431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1105" height="216" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588768954984" />
+    <state width="1105" height="216" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588796664431" />
     <state width="1340" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1105" height="216" key="GridCell.Tab.0.right" timestamp="1588768954984">
+    <state width="1105" height="216" key="GridCell.Tab.0.right" timestamp="1588796664431">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1105" height="216" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588768954984" />
+    <state width="1105" height="216" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588796664431" />
     <state width="1340" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
     <state x="277" y="0" width="1024" height="816" key="SettingsEditor" timestamp="1588516646430">

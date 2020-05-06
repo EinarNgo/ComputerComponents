@@ -46,17 +46,17 @@
             <GridPane fx:id="registrationBox" layoutX="15.0" layoutY="13.0" prefHeight="196.0" prefWidth="300.0">
                <children>
                   <Label text="Komponent" />
-                  <Label text="Produsent" GridPane.rowIndex="2" />
                   <Label text="Navn" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtProdusent" editable="false" prefHeight="27.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="txtNavn" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Produsent" GridPane.rowIndex="2" />
+                  <Label text="Vekt" GridPane.rowIndex="3" />
                   <Label text="Lansert" GridPane.rowIndex="4" />
                   <Label text="Pris" GridPane.rowIndex="5" />
-                  <TextField fx:id="txtPris" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <TextField fx:id="txtKomponent" editable="false" GridPane.columnIndex="1" />
-                  <Label text="Vekt" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtNavn" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtProdusent" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField fx:id="txtVekt" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <TextField fx:id="txtLansert" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtPris" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="121.0" />
@@ -71,9 +71,9 @@
                   <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
                </rowConstraints>
             </GridPane>
-            <Button layoutX="257.0" layoutY="209.0" mnemonicParsing="false" onAction="#registrerKomponent" text="Legg til" />
-            <Button layoutX="206.0" layoutY="209.0" mnemonicParsing="false" onAction="#slettKomponent" text="Slett" />
-            <Button layoutX="138.0" layoutY="209.0" mnemonicParsing="false" onAction="#redigerKomponent" text="Rediger" />
+                <Button layoutX="138.0" layoutY="209.0" mnemonicParsing="false" onAction="#redigerKomponent" text="Rediger" />
+                <Button layoutX="206.0" layoutY="209.0" mnemonicParsing="false" onAction="#slettKomponent" text="Slett" />
+                <Button layoutX="257.0" layoutY="209.0" mnemonicParsing="false" onAction="#registrerKomponent" text="Legg til" />
             <HBox alignment="CENTER" layoutX="4.0" layoutY="277.0" prefHeight="20.0" prefWidth="374.0" spacing="10.0">
                <children>
                   <TextField fx:id="txtSok" onKeyTyped="#searchTxtEntered" promptText="Søk" />
