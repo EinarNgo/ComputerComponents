@@ -18,18 +18,18 @@ public class ComponentRegister implements Serializable {
     private transient ObservableList<Component> cRegister = FXCollections.observableArrayList();
 
     public ComponentRegister() {
-        addComponent(new Component("Case", "Int23el", "Asus",50,"20.10.2018",8000));
-        addComponent(new Component("Motherboard", "SSD","Kingston",400,"2.2.2010",2000));
-        addComponent(new Component("Prosessor", "RRD3400","Rex",100,"3.3.2003",500));
-        addComponent(new Component("Ram", "Intel", "Asus",50,"20.10.2018",8000));
-        addComponent(new Component("Harddisk", "SSD","Kingston",400,"2.2.2010",2000));
-        addComponent(new Component("Power", "RRD3400","Rex",100,"3.3.2003",500));
-        addComponent(new Component("Case", "Intel1", "Asus",50,"20.10.2018",8000));
-        addComponent(new Component("Motherboard", "SSD1","Kingston",400,"2.2.2010",2000));
-        addComponent(new Component("Prosessor", "RRD34001","Rex",100,"3.3.2003",500));
-        addComponent(new Component("Ram", "Intel1", "Asus",50,"20.10.2018",8000));
-        addComponent(new Component("Harddisk", "SSD1","Kingston",400,"2.2.2010",2000));
-        addComponent(new Component("Power", "RRD34001","Rex",100,"3.3.2003",500));
+        addComponent(new Component("Case", "1", "Asus",50,"20.10.2018",8000));
+        addComponent(new Component("Motherboard", "2","Kingston",400,"2.2.2010",2000));
+        addComponent(new Component("Prosessor", "3","Rex",100,"3.3.2003",500));
+        addComponent(new Component("Ram", "4", "Asus",50,"20.10.2018",8000));
+        addComponent(new Component("Harddisk", "5","Kingston",400,"2.2.2010",2000));
+        addComponent(new Component("Power", "6","Rex",100,"3.3.2003",500));
+        addComponent(new Component("Case", "7", "Asus",50,"20.10.2018",8000));
+        addComponent(new Component("Motherboard", "8","Kingston",400,"2.2.2010",2000));
+        addComponent(new Component("Prosessor", "9","Rex",100,"3.3.2003",500));
+        addComponent(new Component("Ram", "10", "Asus",50,"20.10.2018",8000));
+        addComponent(new Component("Harddisk", "11","Kingston",400,"2.2.2010",2000));
+        addComponent(new Component("Power", "12","Rex",100,"3.3.2003",500));
 
     }
 
@@ -55,6 +55,13 @@ public class ComponentRegister implements Serializable {
 
         // Hvis vi kommer hit betyr det at vi ikke fant noen personer
         return components;
+    }
+
+    public ObservableList<Component> filterByNavnEksakt(String navn) {
+        return cRegister.stream().
+                filter(p -> p.getNavn().
+                        matches(String.format(navn))).
+                collect(Collectors.toCollection(FXCollections::observableArrayList));
     }
 
     public void attachTableView(TableView tv) {

@@ -1,5 +1,7 @@
 package programutvikling.controllers;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -34,7 +36,9 @@ public class userController {
     TextArea txtText;
 
     public userController() {
+
     }
+
 
     @FXML
     private void initialize() {
@@ -45,21 +49,14 @@ public class userController {
         fillChoicebox("Harddisk",choiceHarddisk);
         fillChoicebox("Power",choicePower);
 
+        choiceCase.getSelectionModel().selectedIndexProperty()
+                .addListener(new ChangeListener<Number>() {
+                    public void changed(ObservableValue ov, Number value, Number new_value) {
+                        txtText.setText(choiceCase.getItems().get(new_value.intValue()));
+                        summaryText(choiceCase.getItems().get(new_value.intValue()));
+                    }
+                });
     }
-
-    @FXML
-    private void test() {
-        summaryText(choiceCase.getValue());
-        summaryText(choiceProsessor.getValue());
-        summaryText(choiceMotherboard.getValue());
-        summaryText(choiceRam.getValue());
-        summaryText(choiceHarddisk.getValue());
-        summaryText(choicePower.getValue());
-
-        System.out.println(choiceCase.getValue());
-        txtText.setText(summaryText);
-    }
-
 
 
     private void fillChoicebox(String item, ChoiceBox cBox) {
@@ -75,9 +72,9 @@ public class userController {
     }
 
     private void summaryText(String text) {
-        List<Component> test = cRegister.searchRegisterByName(text);
+        List<Component> test = cRegister.filterByNavnEksakt(text);
         for (Component i : test) {
-            summaryText += "\n" + i.getKomponent() + ": " + i.getNavn();
+            System.out.println(i.getNavn());
         }
     }
 }
