@@ -1,4 +1,4 @@
-package programutvikling.controllers;
+package programutvikling.controllers.controllersMain;
 
 
 import javafx.collections.FXCollections;
@@ -12,6 +12,8 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
+import programutvikling.controllers.helpers.ComponentRegister;
+import programutvikling.controllers.helpers.RegistrerComponent;
 import programutvikling.controllers.controllersHelper.editController;
 import programutvikling.controllers.controllersHelper.registerController;
 

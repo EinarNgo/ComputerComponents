@@ -5,7 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
-import programutvikling.controllers.ComponentRegister;
+import programutvikling.controllers.helpers.ComponentRegister;
 
 public class registerController {
 

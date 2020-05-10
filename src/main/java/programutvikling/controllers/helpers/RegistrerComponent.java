@@ -1,4 +1,4 @@
-package programutvikling.controllers;
+package programutvikling.controllers.helpers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

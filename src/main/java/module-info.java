@@ -5,5 +5,6 @@ module fx {
     opens programutvikling to javafx.fxml;
     opens programutvikling.controllers to javafx.fxml;
     opens programutvikling.controllers.controllersHelper to javafx.fxml;
+    opens programutvikling.controllers.controllersMain to javafx.fxml;
     exports programutvikling;
 }

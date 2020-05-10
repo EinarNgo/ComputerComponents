@@ -1,4 +1,4 @@
-package programutvikling.controllers;
+package programutvikling.controllers.controllersMain;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

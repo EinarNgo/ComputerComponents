@@ -21,11 +21,33 @@
   <component name="ChangeListManager">
     <list default="true" id="690d8b4d-8996-4494-bbb8-94c60f20b59e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/ComponentRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/ComponentRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/userController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/ComponentRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/helpers/ComponentRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/RegistrerComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/helpers/RegistrerComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/adminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/registerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/helpers/FileExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/exception/FileExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/helpers/InvalidInputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/exception/InvalidInputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/helpers/applicationCleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/exception/applicationCleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/helpers/inputChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/exception/inputChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/startController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/startController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/userController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/startView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/startView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/userView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/userView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/ComponentRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/ComponentRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/userController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/adminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/adminView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/ComponentRegister.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/RegistrerComponent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/adminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/registerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersHelper/registerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/FileExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/InvalidInputHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/applicationCleaner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/helpers/inputChecker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/startController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/userController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/userController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/startView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/startView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/userView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/userView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,15 +82,9 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="programutvikling.controllers" />
       <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="programutvikling" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\resources\programutvikling" />
@@ -77,6 +93,12 @@
       <recent name="$PROJECT_DIR$/src/main/resources/programutvikling" />
       <recent name="$PROJECT_DIR$/src/main/java/programutvikling" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="programutvikling" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.MainApp">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -84,7 +106,7 @@
       <module name="semesteroppgave" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="programutvikling.controllers.*" />
+          <option name="PATTERN" value="programutvikling.controllers.controllersMain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,7 +119,7 @@
       <module name="ProgSemesteroppgave" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="programutvikling.controllers.*" />
+          <option name="PATTERN" value="programutvikling.controllers.controllersMain.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -212,28 +234,28 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588593151266" />
-    <state width="1104" height="230" key="GridCell.Tab.0.bottom" timestamp="1588812660163">
+    <state width="1102" height="230" key="GridCell.Tab.0.bottom" timestamp="1589135338897">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1104" height="230" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588812660163" />
+    <state width="1102" height="230" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589135338897" />
     <state width="1340" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939800" />
     <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1104" height="230" key="GridCell.Tab.0.center" timestamp="1588812660163">
+    <state width="1102" height="230" key="GridCell.Tab.0.center" timestamp="1589135338897">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1104" height="230" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588812660163" />
+    <state width="1102" height="230" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589135338897" />
     <state width="1340" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1104" height="230" key="GridCell.Tab.0.left" timestamp="1588812660163">
+    <state width="1102" height="230" key="GridCell.Tab.0.left" timestamp="1589135338897">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1104" height="230" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588812660163" />
+    <state width="1102" height="230" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589135338897" />
     <state width="1340" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1104" height="230" key="GridCell.Tab.0.right" timestamp="1588812660163">
+    <state width="1102" height="230" key="GridCell.Tab.0.right" timestamp="1589135338897">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1104" height="230" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588812660163" />
+    <state width="1102" height="230" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589135338897" />
     <state width="1340" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
     <state width="938" height="348" key="GridCell.Tab.1.bottom" timestamp="1588811255022">

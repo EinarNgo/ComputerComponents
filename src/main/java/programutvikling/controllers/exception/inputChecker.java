@@ -1,4 +1,4 @@
-package programutvikling.controllers.helpers;
+package programutvikling.controllers.exception;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
