@@ -8,7 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import programutvikling.base.Component;
-import programutvikling.controllers.helpers.ComponentRegister;
+import programutvikling.base.ComponentRegister;
 
 import java.util.List;
 

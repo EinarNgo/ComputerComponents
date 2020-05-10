@@ -24,12 +24,6 @@ public class inputChecker {
             errorMsg += "Forsikringskode er ugyldig eller feil \n";
         }
 
-        //dato
-
-        //ubetalt erstaning i integer
-
-        //forsikring - vent
-
         if (errorMsg.length() == 0) {
             return true;
 

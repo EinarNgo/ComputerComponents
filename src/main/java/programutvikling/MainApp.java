@@ -12,7 +12,6 @@ public class MainApp extends Application{
         Application.launch(args);
     }
 
-
     public MainApp() {
 
     }

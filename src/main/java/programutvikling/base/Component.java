@@ -4,7 +4,6 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-
 import java.io.Serializable;
 
 public class Component implements Serializable {
@@ -18,9 +17,17 @@ public class Component implements Serializable {
     public final StringProperty lansert;
     public final IntegerProperty pris;
 
-
-
     public Component(String komponent, String navn,String produsent, int vekt, String lanser, int pris){
+
+        if(!ComponentValidator.stringInput(komponent)) {
+            throw new IllegalArgumentException("Komponenten er ugyldig, kan ikke inneholde tall");
+        }
+
+        if(!ComponentValidator.stringInput(navn)) {
+            throw new IllegalArgumentException("Produsent er ugyldig, kan ikke inneholde tall");
+        }
+
+
         this.komponent = new SimpleStringProperty(komponent);
         this.navn = new SimpleStringProperty(navn);
         this.produsent = new SimpleStringProperty(produsent);
