@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -14,28 +15,6 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programutvikling.controllers.controllersMain.userController">
-   <top>
-      <MenuBar BorderPane.alignment="CENTER">
-         <menus>
-            <Menu mnemonicParsing="false" text="File">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="User" />
-                  <MenuItem mnemonicParsing="false" text="Admin" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Edit">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="About" />
-               </items>
-            </Menu>
-         </menus>
-      </MenuBar>
-   </top>
    <center>
       <AnchorPane prefHeight="290.0" prefWidth="405.0" BorderPane.alignment="CENTER">
          <children>
@@ -72,7 +51,30 @@
                   <ChoiceBox fx:id="choicePower" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </GridPane>
-            <TextArea fx:id="txtText" layoutX="13.0" layoutY="310.0" prefHeight="200.0" prefWidth="357.0" />
+            <TextArea fx:id="txtLog" layoutX="57.0" layoutY="302.0" prefHeight="200.0" prefWidth="134.0" />
+            <TextArea fx:id="txtSammendrag" layoutX="191.0" layoutY="302.0" prefHeight="200.0" prefWidth="134.0" />
          </children></AnchorPane>
    </center>
+   <top>
+      <AnchorPane prefHeight="28.0" prefWidth="381.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar prefHeight="27.0" prefWidth="381.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Back to meny" />
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Button fx:id="btnButton" minWidth="35.0" mnemonicParsing="false" onAction="#backToMenu" opacity="0.0" prefHeight="28.0" prefWidth="95.0" text="HEI" />
+         </children>
+      </AnchorPane>
+   </top>
 </BorderPane>

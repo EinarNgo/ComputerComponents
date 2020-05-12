@@ -57,11 +57,31 @@ public class ComponentRegister implements Serializable {
         return components;
     }
 
-    public ObservableList<Component> filterByNavnEksakt(String navn) {
-        return cRegister.stream().
-                filter(p -> p.getNavn().
-                        matches(String.format(navn))).
-                collect(Collectors.toCollection(FXCollections::observableArrayList));
+    public List<Component> filterByKomponentEksakt(String name) {
+        List<Component> components = new ArrayList<>();
+        Pattern pattern = Pattern.compile(name, Pattern.CASE_INSENSITIVE);
+
+        for(Component p : cRegister) {
+            Matcher matcher = pattern.matcher(p.getKomponent());
+
+            if(matcher.find()) {
+                components.add(p);
+            }
+        }
+
+        /*
+        Pattern pattern1 = Pattern.compile(liste, Pattern.CASE_INSENSITIVE);
+        for(Component p : components) {
+            Matcher matcher = pattern1.matcher(p.getNavn());
+
+            if(matcher.find()) {
+                components.add(p);
+            }
+        }
+         */
+
+        // Hvis vi kommer hit betyr det at vi ikke fant noen personer
+        return components;
     }
 
     public void attachTableView(TableView tv) {

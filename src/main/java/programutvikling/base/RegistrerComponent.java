@@ -8,7 +8,7 @@ import programutvikling.base.Component;
 public class RegistrerComponent {
 
     @FXML
-    private TextField txtKomponent,txtNavn,txtProdusent,txtVekt,txtPris;
+    private TextField txtKomponent,txtNavn,txtProdusent,txtVekt,txtPris,txtLansert;
 
 
     Component createPersonfromGUIandResetFields() {
@@ -44,7 +44,7 @@ public class RegistrerComponent {
         txtNavn.setText("");
         txtProdusent.setText("");
         txtVekt.setText("");
-        //txtLansert.setText("");
+        txtLansert.setText("");
         txtPris.setText("");
     }
 }
