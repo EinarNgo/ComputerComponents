@@ -3,8 +3,10 @@ package programutvikling.controllers.controllersMain;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -178,6 +180,16 @@ public class adminController {
     @FXML
     private void filterChoiceChanged() {
         filter();
+    }
+
+    @FXML
+    private void backToMenu(ActionEvent event) throws Exception {
+        Parent newparent = (Parent) FXMLLoader.load(this.getClass().getResource("/programutvikling/startView.fxml"));
+        Scene newscene = new Scene(newparent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setTitle("Adminpanel");
+        window.setScene(newscene);
+        window.show();
     }
 
     @FXML
