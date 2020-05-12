@@ -10,7 +10,7 @@ public class RegistrerComponent {
     @FXML
     private TextField txtKomponent,txtNavn,txtProdusent,txtVekt,txtPris,txtLansert;
 
-
+    /*
     Component createPersonfromGUIandResetFields() {
         try {
             Component c = createComponent();
@@ -25,19 +25,14 @@ public class RegistrerComponent {
 
         return null;
     }
+    */
+
 
     private Component createComponent() {
 
         return new Component(txtKomponent.getText(), txtNavn.getText(), txtProdusent.getText(), Integer.parseInt(txtVekt.getText()), null,Integer.parseInt(txtPris.getText()));
     }
 
-    private String getString(TextField field) {
-        return field.getText();
-    }
-
-    private int getInt(TextField field) {
-        return Integer.parseInt(getString(field));
-    }
 
     private void resetFields() {
         txtKomponent.setText("");

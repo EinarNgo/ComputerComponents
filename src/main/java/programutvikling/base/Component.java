@@ -19,14 +19,11 @@ public class Component implements Serializable {
 
     public Component(String komponent, String navn,String produsent, int vekt, String lanser, int pris){
 
-        if(!ComponentValidator.stringInput(komponent)) {
-            throw new IllegalArgumentException("Komponenten er ugyldig, kan ikke inneholde tall");
-        }
-
-        if(!ComponentValidator.stringInput(navn)) {
-            throw new IllegalArgumentException("Produsent er ugyldig, kan ikke inneholde tall");
-        }
-
+        ComponentValidator.navnInput(navn);
+        ComponentValidator.komponentInput(komponent);
+        ComponentValidator.produsentInput(produsent);
+        ComponentValidator.vektInput(Integer.toString(vekt));
+        ComponentValidator.prisInput(Integer.toString(pris));
 
         this.komponent = new SimpleStringProperty(komponent);
         this.navn = new SimpleStringProperty(navn);
@@ -45,6 +42,7 @@ public class Component implements Serializable {
     }
 
     public void setKomponent(String komponent) {
+        ComponentValidator.komponentInput(komponent);
         this.komponent.set(komponent);
     }
 
@@ -57,6 +55,7 @@ public class Component implements Serializable {
     }
 
     public void setNavn(String navn) {
+        ComponentValidator.navnInput(navn);
         this.navn.set(navn);
     }
 
@@ -69,6 +68,7 @@ public class Component implements Serializable {
     }
 
     public void setProdusent(String produsent) {
+        ComponentValidator.produsentInput(produsent);
         this.produsent.set(produsent);
     }
 
@@ -81,6 +81,7 @@ public class Component implements Serializable {
     }
 
     public void setVekt(int vekt) {
+        ComponentValidator.vektInput(Integer.toString(vekt));
         this.vekt.set(vekt);
     }
 
@@ -105,6 +106,7 @@ public class Component implements Serializable {
     }
 
     public void setPris(int pris) {
+        ComponentValidator.prisInput(Integer.toString(pris));
         this.pris.set(pris);
     }
 }

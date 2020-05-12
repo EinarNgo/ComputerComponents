@@ -69,18 +69,6 @@ public class ComponentRegister implements Serializable {
             }
         }
 
-        /*
-        Pattern pattern1 = Pattern.compile(liste, Pattern.CASE_INSENSITIVE);
-        for(Component p : components) {
-            Matcher matcher = pattern1.matcher(p.getNavn());
-
-            if(matcher.find()) {
-                components.add(p);
-            }
-        }
-         */
-
-        // Hvis vi kommer hit betyr det at vi ikke fant noen personer
         return components;
     }
 

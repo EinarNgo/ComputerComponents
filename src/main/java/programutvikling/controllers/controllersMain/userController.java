@@ -75,13 +75,9 @@ public class userController {
         cBox.getSelectionModel().selectedIndexProperty()
                 .addListener(new ChangeListener<Number>() {
                                  public void changed(ObservableValue ov, Number value, Number new_value) {
-                                     //summaryText += "\n" +text + cBox.getItems().get(new_value.intValue());
                                      String temp = cBox.getItems().get(new_value.intValue());
 
-                                     //summaryText(cBox.getItems().get(new_value.intValue()));
-                                     //System.out.println("\n" +text + cBox.getItems().get(new_value.intValue()));
                                      List<Component> test = cRegister.filterByKomponentEksakt(text);
-                                     //List<Component> help = new ArrayList<>();
                                      for (Component i : test) {
                                          if (i.getNavn().equals(temp)) {
                                              textArea.add(i);
@@ -126,13 +122,5 @@ public class userController {
         cBox.setValue("Ikke valgt");
     }
 
-    /*
-    private void summaryText(String text) {
-        List<Component> test = cRegister.filterByNavnEksakt(text);
-        for (Component i : test) {
-            System.out.println(i.getNavn());
-        }
-    }
 
-     */
 }

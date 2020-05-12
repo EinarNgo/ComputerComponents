@@ -29,11 +29,11 @@ public class registerController {
             Component c = createComponent();
             Dialogs.showSuccessDialog(c.getNavn()+"er lagd til");
             cRegister.addComponent(c);
-        } catch (NumberFormatException nfe) {
-            Dialogs.showErrorDialog("Please only number in Vekt and Pris");
+        } catch (NumberFormatException e) {
+            Dialogs.showErrorDialog( "Pris og vekt kan ikke være tom eller inneholde bokstaver");
             temp = false;
         } catch (IllegalArgumentException e) {
-            Dialogs.showErrorDialog( e.getMessage() +" eller være tom");
+            Dialogs.showErrorDialog( e.getMessage());
             temp = false;
         }
 
@@ -44,6 +44,7 @@ public class registerController {
     }
 
     private Component createComponent() {
+
         return new Component(txtKomponent.getText(), txtNavn.getText() ,txtProdusent.getText(),Integer.parseInt(txtVekt.getText()), txtLansert.getText(),Integer.parseInt(txtPris.getText()));
     }
 
