@@ -138,8 +138,8 @@ public class ComponentRegister implements Serializable {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for(Component p : cRegister) {
-            sb.append(p.toString());
+        for(Component c : cRegister) {
+            sb.append(c.toString());
             sb.append(System.lineSeparator());
         }
 

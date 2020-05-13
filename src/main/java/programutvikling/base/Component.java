@@ -11,14 +11,12 @@ public class Component implements Serializable {
 
     private static final long serialVersionUID = 1;
 
-    //private ComponentRegister componentRegister = new ComponentRegister();
-
-    private transient StringProperty komponent;
-    private transient StringProperty navn;
-    private transient StringProperty produsent;
-    private transient IntegerProperty vekt;
-    private transient StringProperty lansert;
-    private transient IntegerProperty pris;
+    private transient SimpleStringProperty komponent;
+    private transient SimpleStringProperty navn;
+    private transient SimpleStringProperty produsent;
+    private transient SimpleIntegerProperty vekt;
+    private transient SimpleStringProperty lansert;
+    private transient SimpleIntegerProperty pris;
 
     public Component(String komponent, String navn,String produsent, int vekt, String lanser, int pris){
 
@@ -37,78 +35,78 @@ public class Component implements Serializable {
     }
 
     public String getKomponent() {
-        return komponent.get();
+        return komponent.getValue();
     }
 
     public StringProperty komponentProperty() {
         return komponent;
     }
 
-    public void setKomponent(String komponent) {
+    public final void setKomponent(String komponent) {
         ComponentValidator.komponentInput(komponent);
         this.komponent.set(komponent);
     }
 
     public String getNavn() {
-        return navn.get();
+        return navn.getValue();
     }
 
     public StringProperty navnProperty() {
         return navn;
     }
 
-    public void setNavn(String navn) {
+    public final void setNavn(String navn) {
         ComponentValidator.navnInput(navn);
         this.navn.set(navn);
     }
 
     public String getProdusent() {
-        return produsent.get();
+        return produsent.getValue();
     }
 
     public StringProperty produsentProperty() {
         return produsent;
     }
 
-    public void setProdusent(String produsent) {
+    public final void setProdusent(String produsent) {
         ComponentValidator.produsentInput(produsent);
         this.produsent.set(produsent);
     }
 
     public int getVekt() {
-        return vekt.get();
+        return vekt.getValue();
     }
 
     public IntegerProperty vektProperty() {
         return vekt;
     }
 
-    public void setVekt(int vekt) {
+    public final void setVekt(int vekt) {
         ComponentValidator.vektInput(Integer.toString(vekt));
         this.vekt.set(vekt);
     }
 
     public String getLanser() {
-        return lansert.get();
+        return lansert.getValue();
     }
 
     public StringProperty lansertProperty() {
         return lansert;
     }
 
-    public void setLansert(String lansert) {
+    public final void setLansert(String lansert) {
         this.lansert.set(lansert);
     }
 
     public int getPris() {
-        return pris.get();
+        return pris.getValue();
     }
 
     public IntegerProperty prisProperty() {
         return pris;
     }
 
-    public void setPris(int pris) {
+    public final void setPris(int pris) {
         ComponentValidator.prisInput(Integer.toString(pris));
         this.pris.set(pris);
     }
@@ -125,8 +123,8 @@ public class Component implements Serializable {
         s.writeUTF(getKomponent());
         s.writeUTF(getNavn());
         s.writeUTF(getProdusent());
-        s.writeInt(getVekt());
         s.writeUTF(getLanser());
+        s.writeInt(getVekt());
         s.writeInt(getPris());
     }
 
@@ -141,15 +139,15 @@ public class Component implements Serializable {
         this.komponent = new SimpleStringProperty(komponent);
         this.navn = new SimpleStringProperty(navn);
         this.produsent = new SimpleStringProperty(produsent);
-        this.vekt = new SimpleIntegerProperty(vekt);
         this.lansert = new SimpleStringProperty(lansert);
+        this.vekt = new SimpleIntegerProperty(vekt);
         this.pris = new SimpleIntegerProperty(pris);
 
         setKomponent(komponent);
         setNavn(navn);
         setProdusent(produsent);
-        setVekt(vekt);
         setLansert(lansert);
+        setVekt(vekt);
         setPris(pris);
     }
 }
