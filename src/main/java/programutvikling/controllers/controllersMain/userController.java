@@ -70,7 +70,7 @@ public class userController {
         Parent newparent = (Parent) FXMLLoader.load(this.getClass().getResource("/programutvikling/startView.fxml"));
         Scene newscene = new Scene(newparent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setTitle("Adminpanel");
+        window.setTitle("Startmenu");
         window.setScene(newscene);
         window.show();
     }
