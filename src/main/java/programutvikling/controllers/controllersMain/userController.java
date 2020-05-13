@@ -15,6 +15,7 @@ import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
 import programutvikling.base.ComponentRegister;
+import programutvikling.base.DataRegister;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,6 +25,7 @@ public class userController {
     @FXML
     ChoiceBox<String> choiceCase, choiceMotherboard, choiceProsessor, choiceRam, choiceHarddisk, choicePower;
     private ComponentRegister cRegister = startController.getcRegister();
+    private DataRegister dRegister = startController.getdRegister();
 
 
     private String summaryText = "", logText="";

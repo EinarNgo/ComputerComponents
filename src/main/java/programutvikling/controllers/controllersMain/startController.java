@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import programutvikling.MainApp;
 import programutvikling.base.Component;
 import programutvikling.base.ComponentRegister;
+import programutvikling.base.DataRegister;
 import programutvikling.controllers.controllersHelper.registerController;
 
 import java.io.IOException;
@@ -22,8 +23,13 @@ import java.util.ResourceBundle;
 public class startController {
 
     private static ComponentRegister cRegister = new ComponentRegister();
+    private static DataRegister dRegister = new DataRegister();
 
     private Stage stage;
+
+    public void setData(DataRegister dRegister) {
+        this.dRegister = dRegister;
+    }
 
     public void setKomponent(ComponentRegister cRegister) {
         this.cRegister = cRegister;
@@ -57,5 +63,9 @@ public class startController {
 
     public static ComponentRegister getcRegister() {
         return cRegister;
+    }
+
+    public static DataRegister getdRegister() {
+        return dRegister;
     }
 }

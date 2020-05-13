@@ -20,17 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="690d8b4d-8996-4494-bbb8-94c60f20b59e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/css/user.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/DataRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/css/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/css/start.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/startView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/startView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/userView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/userView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/startController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/startController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/userController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersMain/startController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/controllers/controllersMain/startController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/semesteroppgave-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/semesteroppgave-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,8 +40,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,18 +87,6 @@
       <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$/src/main/resources/programutvikling" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Maven.Unnamed">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -220,13 +208,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="91" key="#Project_Structure" timestamp="1588364305667">
@@ -238,6 +225,10 @@
     </state>
     <state x="245" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588461688856" />
     <state x="184" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1588364677906" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1589410014333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589410014333" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589403472095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -246,28 +237,28 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588593151266" />
-    <state width="1364" height="258" key="GridCell.Tab.0.bottom" timestamp="1589404690640">
+    <state width="1363" height="258" key="GridCell.Tab.0.bottom" timestamp="1589410894400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1364" height="258" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589404690640" />
+    <state width="1363" height="258" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589410894400" />
     <state width="1340" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939800" />
     <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1364" height="258" key="GridCell.Tab.0.center" timestamp="1589404690639">
+    <state width="1363" height="258" key="GridCell.Tab.0.center" timestamp="1589410894400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1364" height="258" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589404690639" />
+    <state width="1363" height="258" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589410894400" />
     <state width="1340" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1364" height="258" key="GridCell.Tab.0.left" timestamp="1589404690639">
+    <state width="1363" height="258" key="GridCell.Tab.0.left" timestamp="1589410894399">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1364" height="258" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589404690639" />
+    <state width="1363" height="258" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589410894399" />
     <state width="1340" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1364" height="258" key="GridCell.Tab.0.right" timestamp="1589404690639">
+    <state width="1363" height="258" key="GridCell.Tab.0.right" timestamp="1589410894400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1364" height="258" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589404690639" />
+    <state width="1363" height="258" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589410894400" />
     <state width="1340" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
     <state width="938" height="348" key="GridCell.Tab.1.bottom" timestamp="1589401532134">
