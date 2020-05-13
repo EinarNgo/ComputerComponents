@@ -128,6 +128,17 @@ public class ComponentRegister implements Serializable {
                 collect(Collectors.toCollection(FXCollections::observableArrayList));
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for(Component p : cRegister) {
+            sb.append(p.toString());
+            sb.append(System.lineSeparator());
+        }
+
+        return sb.toString();
+    }
+
     private void writeObject(ObjectOutputStream s) throws IOException {
         s.defaultWriteObject();
         s.writeObject(new ArrayList<>(cRegister));

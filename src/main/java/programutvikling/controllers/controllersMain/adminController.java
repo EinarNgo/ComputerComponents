@@ -77,10 +77,6 @@ public class adminController {
                 (observable, oldValue, newValue) -> showKomponent(newValue));
     }
 
-    private void updateComponentList() {
-        cRegister.attachTableView(tblKomponent);
-    }
-
     @FXML
     private void slettKomponent() {
         int valgtIndex = tblKomponent.getSelectionModel().getSelectedIndex();
@@ -146,7 +142,7 @@ public class adminController {
     private void openFile() {
         FileHandler.openFile(stage, cRegister);
         txtSok.setText("");
-        updatePersonList();
+        updateComponentList();
     }
 
     @FXML
@@ -205,13 +201,14 @@ public class adminController {
         filter();
     }
 
-    private void updatePersonList() {
+    private void updateComponentList() {
         cRegister.attachTableView(tblKomponent);
     }
 
+
     private void filter() {
         if(txtSok.getText().isBlank()) {
-            updatePersonList();
+            updateComponentList();
             return;
         }
 

@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class FileOpenerTxt implements programutvikling.fileHandler.FileOpener {
+public class FileOpenerTxt implements FileOpener {
     @Override
     public void open(ComponentRegister register, Path filePath) throws IOException {
         register.removeAll();
@@ -22,7 +22,7 @@ public class FileOpenerTxt implements programutvikling.fileHandler.FileOpener {
         }
     }
 
-    private Component parseComponent(String line) throws programutvikling.fileHandler.InvalidPersonFormatException {
+    private Component parseComponent(String line) throws InvalidPersonFormatException {
         // split line string into three using the separator ";"
         String[] split = line.split(";");
         if(split.length != 6) {
@@ -42,7 +42,7 @@ public class FileOpenerTxt implements programutvikling.fileHandler.FileOpener {
         try {
             return new Component(komponent, navn, produsent, vekt, lansert,pris);
         } catch (IllegalArgumentException e) {
-            throw new programutvikling.fileHandler.InvalidPersonFormatException(e.getMessage());
+            throw new InvalidPersonFormatException(e.getMessage());
         }
     }
 

@@ -111,6 +111,13 @@ public class Component implements Serializable {
         this.pris.set(pris);
     }
 
+    @Override
+    public String toString() {
+        return String.format("%s;%s;%s;%s;%s;%s",
+                komponent.getValue(), navn.getValue(), produsent.getValue(),
+                vekt.getValue(), lansert.getValue(),pris.getValue());
+    }
+
     private void writeObject(ObjectOutputStream s) throws IOException {
         s.defaultWriteObject();
         s.writeUTF(getKomponent());
