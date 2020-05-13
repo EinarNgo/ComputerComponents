@@ -21,7 +21,7 @@ import java.util.ResourceBundle;
 
 public class startController {
 
-    private ComponentRegister cRegister = new ComponentRegister();
+    private static ComponentRegister cRegister = new ComponentRegister();
 
     private Stage stage;
 
@@ -55,6 +55,7 @@ public class startController {
 
     }
 
-
-
+    public static ComponentRegister getcRegister() {
+        return cRegister;
+    }
 }

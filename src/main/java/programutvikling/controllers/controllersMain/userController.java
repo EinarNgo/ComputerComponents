@@ -23,7 +23,7 @@ public class userController {
 
     @FXML
     ChoiceBox<String> choiceCase, choiceMotherboard, choiceProsessor, choiceRam, choiceHarddisk, choicePower;
-    private ComponentRegister cRegister = new ComponentRegister();
+    private ComponentRegister cRegister = startController.getcRegister();
 
 
     private String summaryText = "", logText="";

@@ -48,7 +48,10 @@ public class adminController {
     @FXML
     GridPane registrationBox;
 
-    private ComponentRegister cRegister = new ComponentRegister();
+    private ComponentRegister cRegister = startController.getcRegister();
+
+
+
     private RegistrerComponent registrerComponent;
     private Dialogs dialogs;
     private Stage stage;
@@ -233,4 +236,6 @@ public class adminController {
             tblKomponent.setItems(result);
         }
     }
+
+
 }
