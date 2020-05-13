@@ -116,7 +116,7 @@ public class adminController {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/registerKundeScene.fxml").openStream());
+            root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/registerKundeView.fxml").openStream());
 
             registerController controller = fxmlLoader.getController();
 
@@ -136,9 +136,6 @@ public class adminController {
         editKomponentStage.initOwner(txtKomponent.getScene().getWindow());
         editKomponentStage.initModality(Modality.WINDOW_MODAL);
         editKomponentStage.show();
-    }
-    public void setStage(Stage stage) {
-        this.stage = stage;
     }
 
     @FXML
@@ -160,7 +157,7 @@ public class adminController {
             Parent root = null;
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/editKundeScene.fxml").openStream());
+                root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/editKundeView.fxml").openStream());
 
                 // Får tak i controlleren og overfører referanse til person-objektet
                 editController controller = fxmlLoader.getController();

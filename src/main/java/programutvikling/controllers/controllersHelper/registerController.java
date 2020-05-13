@@ -26,7 +26,7 @@ public class registerController {
 
         try {
             Component c = createComponent();
-            Dialogs.showSuccessDialog(c.getNavn()+"er lagd til");
+            Dialogs.showSuccessDialog(c.getNavn()+" er lagd til");
             cRegister.addComponent(c);
         } catch (NumberFormatException e) {
             Dialogs.showErrorDialog( "Pris og vekt kan ikke være tom eller inneholde bokstaver");
@@ -39,7 +39,6 @@ public class registerController {
         if (temp == true) {
             closeWindow();
         }
-
     }
 
     private Component createComponent() {

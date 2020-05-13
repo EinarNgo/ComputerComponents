@@ -1,0 +1,10 @@
+.root {
+    -fx-background-color:green;
+    -fx-font-family: verdana;
+    -fx-opacity: 0.9;
+}
+
+.button {
+    -fx-color: lightblue;
+    -fx-font-family: verdana;
+}
