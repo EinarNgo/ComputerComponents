@@ -25,6 +25,7 @@ public class MainApp extends Application{
         public void start(Stage stage) throws IOException {
             scene = new Scene(loadFXML("startView", stage, cRegister));
             stage.setScene(scene);
+            stage.setResizable(false);
             stage.show();
         }
 

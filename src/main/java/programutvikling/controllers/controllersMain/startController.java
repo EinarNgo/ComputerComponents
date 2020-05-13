@@ -39,6 +39,7 @@ public class startController {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("Adminpanel");
         window.setScene(newscene);
+        window.setResizable(false);
         window.show();
     }
 
@@ -49,6 +50,7 @@ public class startController {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setTitle("Userpanel");
         window.setScene(newscene);
+        window.setResizable(false);
         window.show();
 
     }
