@@ -53,11 +53,11 @@ public class adminController {
     private Dialogs dialogs;
     private Stage stage;
 
-
     public adminController() {
         // Add some sample data.
 
     }
+
     @FXML
     private void initialize() {
         updateComponentList();
@@ -194,6 +194,7 @@ public class adminController {
         window.setTitle("Adminpanel");
         window.setScene(newscene);
         window.show();
+
     }
 
     @FXML
