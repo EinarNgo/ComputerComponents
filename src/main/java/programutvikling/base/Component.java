@@ -11,6 +11,8 @@ public class Component implements Serializable {
 
     private static final long serialVersionUID = 1;
 
+    //private ComponentRegister componentRegister = new ComponentRegister();
+
     private transient StringProperty komponent;
     private transient StringProperty navn;
     private transient StringProperty produsent;

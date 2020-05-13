@@ -10,8 +10,8 @@
    <center>
       <AnchorPane prefHeight="290.0" prefWidth="405.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="123.0" layoutY="244.0" mnemonicParsing="false" onAction="#btnAdmin" prefHeight="27.0" prefWidth="135.0" text="Admin" />
-            <Button layoutX="123.0" layoutY="285.0" mnemonicParsing="false" onAction="#btnUser" prefHeight="27.0" prefWidth="136.0" text="User" />
+            <Button fx:id="btnAdmin" layoutX="123.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleBtn" prefHeight="27.0" prefWidth="135.0" text="Admin" />
+            <Button fx:id="btnUser" layoutX="123.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleBtn" prefHeight="27.0" prefWidth="136.0" text="User" />
             <Label layoutX="118.0" layoutY="120.0" prefHeight="28.0" prefWidth="146.0" text="Build a computer" textAlignment="CENTER">
                <font>
                   <Font size="19.0" />
