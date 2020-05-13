@@ -20,12 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="690d8b4d-8996-4494-bbb8-94c60f20b59e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/css/user.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/base/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/base/ComponentRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/ComponentRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/base/Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/base/Component.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/programutvikling/base/ComponentRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/programutvikling/base/ComponentRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/adminView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/css/start.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/css/start.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/startView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/startView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/programutvikling/userView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/programutvikling/userView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/semesteroppgave-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/semesteroppgave-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +41,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -43,15 +49,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bN9G0IVmvu6JKCnRM21Uxyzbgk" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588384520849" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/programutvikling/fileHandler" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.2675" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -77,7 +88,19 @@
       <recent name="$PROJECT_DIR$/src/main/resources/programutvikling" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MainApp">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Maven.Unnamed">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="programutvikling.App" />
       <module name="semesteroppgave" />
@@ -182,8 +205,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585181405017</updated>
+      <workItem from="1589405702449" duration="614000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
@@ -193,12 +220,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="91" key="#Project_Structure" timestamp="1588364305667">

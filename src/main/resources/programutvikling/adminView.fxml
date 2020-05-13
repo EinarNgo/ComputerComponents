@@ -18,6 +18,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
+<?import java.net.URL?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="programutvikling.controllers.controllersMain.adminController">
    <center>
       <AnchorPane prefHeight="290.0" prefWidth="405.0" BorderPane.alignment="CENTER">
@@ -128,4 +129,7 @@
          </children>
       </AnchorPane>
    </top>
+    <stylesheets>
+        <URL value="@css/admin.css"/>
+    </stylesheets>
 </BorderPane>
