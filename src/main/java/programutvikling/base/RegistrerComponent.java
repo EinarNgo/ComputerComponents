@@ -34,7 +34,7 @@ public class RegistrerComponent {
     }
 
 
-    private void resetFields() {
+    public void resetFields() {
         txtKomponent.setText("");
         txtNavn.setText("");
         txtProdusent.setText("");

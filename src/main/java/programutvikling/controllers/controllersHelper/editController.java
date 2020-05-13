@@ -1,13 +1,9 @@
 package programutvikling.controllers.controllersHelper;
 
-import javafx.beans.property.IntegerProperty;
 import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
-import programutvikling.base.ComponentValidator;
-import programutvikling.controllers.exception.Dialogs;
 
 
 public class editController {

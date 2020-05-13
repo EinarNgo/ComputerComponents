@@ -11,6 +11,12 @@ import programutvikling.base.Component;
 
 public class startController {
 
+    private Stage stage;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
     public startController() {
         // Add some sample data.
      }

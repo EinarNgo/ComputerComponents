@@ -51,8 +51,8 @@
                   <ChoiceBox fx:id="choicePower" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </GridPane>
-            <TextArea fx:id="txtLog" layoutX="57.0" layoutY="302.0" prefHeight="200.0" prefWidth="134.0" />
-            <TextArea fx:id="txtSammendrag" layoutX="191.0" layoutY="302.0" prefHeight="200.0" prefWidth="134.0" />
+            <TextArea fx:id="txtLog" editable="false" layoutX="13.0" layoutY="302.0" prefHeight="200.0" prefWidth="178.0" />
+            <TextArea fx:id="txtSammendrag" editable="false" layoutX="191.0" layoutY="302.0" prefHeight="200.0" prefWidth="178.0" />
          </children></AnchorPane>
    </center>
    <top>

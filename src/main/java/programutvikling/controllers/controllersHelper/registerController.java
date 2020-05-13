@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
-import programutvikling.controllers.exception.Dialogs;
 import programutvikling.base.ComponentRegister;
 
 public class registerController {

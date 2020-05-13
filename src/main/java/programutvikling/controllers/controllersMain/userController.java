@@ -31,11 +31,15 @@ public class userController {
     @FXML
     TextArea txtLog, txtSammendrag;
     List<Component> textArea = new ArrayList<>();
+    private Stage stage;
 
     public userController() {
 
     }
 
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
 
     @FXML
     private void initialize() {

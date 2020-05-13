@@ -1,4 +1,4 @@
-package programutvikling.controllers.exception;
+package programutvikling.controllers.controllersHelper;
 
 import javafx.scene.control.Alert;
 
@@ -21,4 +21,15 @@ public class Dialogs {
 
         alert.showAndWait();
     }
+
+    public static void showNoSelectDialog(String msg) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("No Selection");
+        alert.setHeaderText("No component Selected");
+        alert.setContentText(msg);
+
+        alert.showAndWait();
+    }
+
+
 }

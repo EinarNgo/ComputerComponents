@@ -1,21 +1,22 @@
 package programutvikling.base;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
+
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class Component implements Serializable {
 
     private static final long serialVersionUID = 1;
 
-    public final StringProperty komponent;
-    public final StringProperty navn;
-    public final StringProperty produsent;
-    public final IntegerProperty vekt;
-    public final StringProperty lansert;
-    public final IntegerProperty pris;
+    private transient StringProperty komponent;
+    private transient StringProperty navn;
+    private transient StringProperty produsent;
+    private transient IntegerProperty vekt;
+    private transient StringProperty lansert;
+    private transient IntegerProperty pris;
 
     public Component(String komponent, String navn,String produsent, int vekt, String lanser, int pris){
 
@@ -108,5 +109,38 @@ public class Component implements Serializable {
     public void setPris(int pris) {
         ComponentValidator.prisInput(Integer.toString(pris));
         this.pris.set(pris);
+    }
+
+    private void writeObject(ObjectOutputStream s) throws IOException {
+        s.defaultWriteObject();
+        s.writeUTF(getKomponent());
+        s.writeUTF(getNavn());
+        s.writeUTF(getProdusent());
+        s.writeInt(getVekt());
+        s.writeUTF(getLanser());
+        s.writeInt(getPris());
+    }
+
+    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException {
+        String komponent = s.readUTF();
+        String navn = s.readUTF();
+        String produsent = s.readUTF();
+        String lansert = s.readUTF();
+        int vekt = s.readInt();
+        int pris = s.readInt();
+
+        this.komponent = new SimpleStringProperty(komponent);
+        this.navn = new SimpleStringProperty(navn);
+        this.produsent = new SimpleStringProperty(produsent);
+        this.vekt = new SimpleIntegerProperty(vekt);
+        this.lansert = new SimpleStringProperty(lansert);
+        this.pris = new SimpleIntegerProperty(pris);
+
+        setKomponent(komponent);
+        setNavn(navn);
+        setProdusent(produsent);
+        setVekt(vekt);
+        setLansert(lansert);
+        setPris(pris);
     }
 }

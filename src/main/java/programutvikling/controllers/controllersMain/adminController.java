@@ -16,8 +16,10 @@ import javafx.stage.Stage;
 import programutvikling.base.Component;
 import programutvikling.base.ComponentRegister;
 import programutvikling.base.RegistrerComponent;
+import programutvikling.controllers.controllersHelper.FileHandler;
 import programutvikling.controllers.controllersHelper.editController;
 import programutvikling.controllers.controllersHelper.registerController;
+import programutvikling.controllers.controllersHelper.Dialogs;
 
 import java.io.IOException;
 
@@ -48,6 +50,8 @@ public class adminController {
 
     private ComponentRegister cRegister = new ComponentRegister();
     private RegistrerComponent registrerComponent;
+    private Dialogs dialogs;
+    private Stage stage;
 
 
     public adminController() {
@@ -81,15 +85,10 @@ public class adminController {
     private void slettKomponent() {
         int valgtIndex = tblKomponent.getSelectionModel().getSelectedIndex();
         if (valgtIndex >=0) {
-            tblKomponent.getItems().remove(valgtIndex);
+            System.out.println(tblKomponent.getSelectionModel().getSelectedIndex());
+            cRegister.removeInded(valgtIndex);
         } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.initOwner(txtKomponent.getScene().getWindow());
-            alert.setTitle("No Selection");
-            alert.setHeaderText("No component Selected");
-            alert.setContentText("Please select a component in the table.");
-
-            alert.showAndWait();
+            dialogs.showNoSelectDialog("Please select a component in the table.");
         }
     }
 
@@ -139,6 +138,21 @@ public class adminController {
         editKomponentStage.initModality(Modality.WINDOW_MODAL);
         editKomponentStage.show();
     }
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    private void openFile() {
+        FileHandler.openFile(stage, cRegister);
+        txtSok.setText("");
+        updatePersonList();
+    }
+
+    @FXML
+    private void saveFile() {
+        FileHandler.saveFile(stage, cRegister);
+    }
 
     @FXML
     private void redigerKomponent() {
@@ -167,13 +181,7 @@ public class adminController {
             editKomponentStage.initModality(Modality.WINDOW_MODAL);
             editKomponentStage.show();
         } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.initOwner(txtKomponent.getScene().getWindow());
-            alert.setTitle("No Selection");
-            alert.setHeaderText("No component Selected");
-            alert.setContentText("Please select a component in the table.");
-
-            alert.showAndWait();
+            dialogs.showNoSelectDialog("Please select a component in the table.");
         }
     }
 

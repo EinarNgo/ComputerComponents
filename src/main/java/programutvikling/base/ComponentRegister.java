@@ -5,6 +5,9 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;
 import programutvikling.base.Component;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,11 +33,18 @@ public class ComponentRegister implements Serializable {
         addComponent(new Component("Ram", "ti", "Asus",50,"20.10.2018",8000));
         addComponent(new Component("Harddisk", "elleve","Kingston",400,"2.2.2010",2000));
         addComponent(new Component("Power", "tolv","Rex",100,"3.3.2003",500));
-
     }
 
     public List<Component> getRegister() {
         return cRegister;
+    }
+
+    public void removeAll() {
+        cRegister.clear();
+    }
+
+    public void removeInded(int i) {
+        cRegister.remove(i);
     }
 
     public void addComponent(Component c) {
@@ -116,6 +126,17 @@ public class ComponentRegister implements Serializable {
         return cRegister.stream().
                 filter(p -> p.getPris() == pris).
                 collect(Collectors.toCollection(FXCollections::observableArrayList));
+    }
+
+    private void writeObject(ObjectOutputStream s) throws IOException {
+        s.defaultWriteObject();
+        s.writeObject(new ArrayList<>(cRegister));
+    }
+
+    private void readObject(ObjectInputStream s) throws IOException, ClassNotFoundException {
+        List<Component> list = (List<Component>) s.readObject();
+        cRegister = FXCollections.observableArrayList();
+        cRegister.addAll(list);
     }
 
 }
