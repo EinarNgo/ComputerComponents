@@ -24,11 +24,11 @@ public class FileOpenerTxt implements FileOpener {
         }
     }
 
-    private Component parseComponent(String line) throws InvalidPersonFormatException {
+    private Component parseComponent(String line) throws InvalidComponentFormatException {
         // split line string into three using the separator ";"
         String[] split = line.split(";");
         if(split.length != 6) {
-            throw new programutvikling.fileHandler.InvalidPersonFormatException("Du må bruke ; for å separere datafeltene.");
+            throw new InvalidComponentFormatException("Du må bruke ; for å separere datafeltene.");
         }
 
         // extract all datafields from the string
@@ -44,7 +44,7 @@ public class FileOpenerTxt implements FileOpener {
         try {
             return new Component(komponent, navn, produsent, vekt, lansert,pris);
         } catch (IllegalArgumentException e) {
-            throw new InvalidPersonFormatException(e.getMessage());
+            throw new InvalidComponentFormatException(e.getMessage());
         }
     }
 
@@ -61,11 +61,11 @@ public class FileOpenerTxt implements FileOpener {
         }
     }
 
-    private Data parseData(String line) throws InvalidPersonFormatException {
+    private Data parseData(String line) throws InvalidComponentFormatException {
         // split line string into three using the separator ";"
         String[] split = line.split(";");
         if(split.length != 7) {
-            throw new programutvikling.fileHandler.InvalidPersonFormatException("Du må bruke ; for å separere datafeltene.");
+            throw new InvalidComponentFormatException("Du må bruke ; for å separere datafeltene.");
         }
 
         // extract all datafields from the string
@@ -82,7 +82,7 @@ public class FileOpenerTxt implements FileOpener {
         try {
             return new Data(aCase, motherboard, prosessor, ram, harddisk,power,pris);
         } catch (IllegalArgumentException e) {
-            throw new InvalidPersonFormatException(e.getMessage());
+            throw new InvalidComponentFormatException(e.getMessage());
         }
     }
 

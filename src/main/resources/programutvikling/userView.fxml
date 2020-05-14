@@ -119,7 +119,7 @@
                 </Menu>
               </menus>
             </MenuBar>
-            <Button fx:id="btnButton" minWidth="35.0" mnemonicParsing="false" onAction="#backToMenu" opacity="0.0" prefHeight="28.0" prefWidth="95.0" text="HEI" />
+            <Button fx:id="btnButton" minWidth="35.0" mnemonicParsing="false" onAction="#backToMenu" opacity="0.0" prefHeight="28.0" prefWidth="160.0" text="HEI" />
          </children>
       </AnchorPane>
    </top>
