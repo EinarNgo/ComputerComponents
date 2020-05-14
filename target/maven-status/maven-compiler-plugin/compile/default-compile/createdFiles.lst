@@ -1,8 +1,7 @@
 programutvikling\controllers\controllersHelper\FileHandler$DialogMode.class
-programutvikling\base\RegistrerComponent.class
 programutvikling\controllers\controllersMain\adminController.class
 programutvikling\base\Data.class
-programutvikling\fileHandler\InvalidPersonFormatException.class
+programutvikling\fileHandler\InvalidComponentFormatException.class
 programutvikling\fileHandler\FileSaverJobj.class
 programutvikling\fileHandler\FileOpenerTxt.class
 module-info.class

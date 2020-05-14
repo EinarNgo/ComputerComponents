@@ -1,6 +1,7 @@
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\base\DataRegister.java
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\fileHandler\FileSaverTxt.java
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\controllers\controllersMain\userController.java
+C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\fileHandler\InvalidComponentFormatException.java
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\controllers\controllersHelper\editController.java
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\fileHandler\FileOpener.java
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\controllers\controllersHelper\Dialogs.java
@@ -17,6 +18,4 @@ C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikli
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\base\ComponentValidator.java
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\fileHandler\FileSaverJobj.java
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\fileHandler\FileOpenerTxt.java
-C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\base\RegistrerComponent.java
 C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\controllers\controllersMain\adminController.java
-C:\Users\Einar\Documents\GitHub\ProgSemesteroppgave\src\main\java\programutvikling\fileHandler\InvalidPersonFormatException.java
