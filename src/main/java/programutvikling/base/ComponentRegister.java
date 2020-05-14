@@ -22,18 +22,18 @@ public class ComponentRegister implements Serializable {
 
     public ComponentRegister() {
 
-        addComponent(new Component("Case", "en", "Asus",50,"20-10-3008",8000));
-        addComponent(new Component("Motherboard", "to","Kingston",400,"22-02-2010",2000));
-        addComponent(new Component("Prosessor", "tre","Rex",100,"03-03-2003",500));
-        addComponent(new Component("Ram", "fire", "Asus",50,"20-10-2018",8000));
-        addComponent(new Component("Harddisk", "fem","Kingston",400,"02-02-2010",2000));
-        addComponent(new Component("Power", "seks","Rex",100,"30-03-2003",500));
-        addComponent(new Component("Case", "syv", "Asus",50,"20-10-2018",8000));
-        addComponent(new Component("Motherboard", "åtte","Kingston",400,"20-02-2010",2000));
-        addComponent(new Component("Prosessor", "ni","Rex",100,"30-03-2003",500));
-        addComponent(new Component("Ram", "ti", "Asus",50,"20-10-2018",8000));
-        addComponent(new Component("Harddisk", "elleve","Kingston",400,"20-02-2010",2000));
-        addComponent(new Component("Power", "tolv","Rex",100,"20-02-2003",500));
+        addComponent(new Component("Kabinett", "NXT", "Asus",50,"20-10-3008",8000));
+        addComponent(new Component("Hovedkort", "MH42EX","Kingston",400,"22-02-2010",2000));
+        addComponent(new Component("Prosessor", "I7 7700K","Intel",100,"03-03-2003",500));
+        addComponent(new Component("Ram", "16GB DDR5", "Corsair",50,"20-10-2018",8000));
+        addComponent(new Component("Harddisk", "SSD 512GB","Samsung",400,"02-02-2010",2000));
+        addComponent(new Component("Strømforsyning", "Bronze 80W","EVGA",100,"30-03-2003",500));
+        addComponent(new Component("Kabinett", "Tower", "Corsair",50,"20-10-2018",8000));
+        addComponent(new Component("Hovedkort", "B450-F","Asus",400,"20-02-2010",2000));
+        addComponent(new Component("Prosessor", "Ryzen 3600X","AMD",100,"30-03-2003",500));
+        addComponent(new Component("Ram", "4GB DDR3", "Corsair",50,"20-10-2018",8000));
+        addComponent(new Component("Harddisk", "1TB HDD","Seagate",400,"20-02-2010",2000));
+        addComponent(new Component("Strømforsyning", "120W Gold","Corsair",100,"20-02-2003",500));
 
 
     }

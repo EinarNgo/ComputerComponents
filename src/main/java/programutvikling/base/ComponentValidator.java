@@ -10,8 +10,8 @@ public class ComponentValidator {
 
     public static void komponentInput(String komponent) {
 
-        if (!komponent.equals("Case") && !komponent.equals("Motherboard") && !komponent.equals("Prosessor") && !komponent.equals("Ram") && !komponent.equals("Harddisk") && !komponent.equals("Power")) {
-            throw new IllegalArgumentException("Komponent må være Case, Motherboard, Prosessor, Ram, Harddisk og power");
+        if (!komponent.equals("Kabinett") && !komponent.equals("Hovedkort") && !komponent.equals("Prosessor") && !komponent.equals("Ram") && !komponent.equals("Harddisk") && !komponent.equals("Strømforsyning")) {
+            throw new IllegalArgumentException("Komponent må være Kabinett, Hovedkort, Prosessor, Ram, Harddisk og Strømforsyning");
         }
 
         if (komponent.isBlank() && komponent.matches("[^\\d]+")) {
