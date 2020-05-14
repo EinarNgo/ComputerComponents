@@ -93,13 +93,6 @@ public class ComponentRegister implements Serializable {
         tv.setItems(cRegister);
     }
 
-    public ObservableList<Component> filterByComponenttest(String component) {
-        return cRegister.stream().
-                filter(p -> p.getKomponent().toLowerCase().
-                        matches(String.format("%s%s%s",".*", component.toLowerCase(), ".*"))).
-                collect(Collectors.toCollection(FXCollections::observableArrayList));
-    }
-
     public ObservableList<Component> filterByComponent(String component) {
         return cRegister.stream().
                 filter(p -> p.getKomponent().toLowerCase().

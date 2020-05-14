@@ -86,6 +86,7 @@ public class adminController {
         if (valgtIndex >=0) {
             System.out.println(tblKomponent.getSelectionModel().getSelectedIndex());
             cRegister.removeInded(valgtIndex);
+            updateComponentList();
         } else {
             dialogs.showNoSelectDialog("Please select a component in the table.");
         }

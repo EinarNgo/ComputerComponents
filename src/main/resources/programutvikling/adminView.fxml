@@ -60,9 +60,9 @@
                   <Label text="Filtering" />
                   <ChoiceBox fx:id="kategoriFilter" onAction="#filterChoiceChanged" prefHeight="25.0" prefWidth="105.0">
                       <String fx:value="Komponent" />
+                      <String fx:value="Navn" />
                       <String fx:value="Produsent" />
                       <String fx:value="Vekt" />
-                      <String fx:value="Versjon" />
                       <String fx:value="Lansert" />
                       <String fx:value="Pris" />
                   </ChoiceBox>
