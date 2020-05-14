@@ -114,8 +114,8 @@
                 <Menu mnemonicParsing="false" text="Back to meny" />
                 <Menu mnemonicParsing="false" text="Filbehandling">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Open file" />
-                    <MenuItem mnemonicParsing="false" text="Save file" />
+                        <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open file" />
+                    <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Save file" />
                   </items>
                 </Menu>
               </menus>

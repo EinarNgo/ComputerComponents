@@ -115,7 +115,7 @@ public class Data implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("%s;%s;%s;%s;%s;%s",
+        return String.format("%s;%s;%s;%s;%s;%s;%s",
                 aCase.getValue(), motherboard.getValue(), prosessor.getValue(),
                 ram.getValue(), harddisk.getValue(), power.getValue(),pris.getValue());
     }

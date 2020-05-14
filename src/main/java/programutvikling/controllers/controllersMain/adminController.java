@@ -140,14 +140,14 @@ public class adminController {
 
     @FXML
     private void openFile() {
-        FileHandler.openFile(stage, cRegister);
+        FileHandler.openFileComponent(stage, cRegister);
         txtSok.setText("");
         updateComponentList();
     }
 
     @FXML
     private void saveFile() {
-        FileHandler.saveFile(stage, cRegister);
+        FileHandler.saveFileComponent(stage, cRegister);
     }
 
     @FXML

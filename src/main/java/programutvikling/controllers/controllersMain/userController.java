@@ -17,6 +17,7 @@ import programutvikling.base.ComponentRegister;
 import programutvikling.base.Data;
 import programutvikling.base.DataRegister;
 import programutvikling.controllers.controllersHelper.Dialogs;
+import programutvikling.controllers.controllersHelper.FileHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -126,6 +127,23 @@ public class userController {
 
              */
         }
+    }
+
+    @FXML
+    private void openFile() {
+        FileHandler.openFileData(stage, dRegister);
+        updateDataList();
+        choiceCase.setValue("Ikke valgt");
+        choiceProsessor.setValue("Ikke valgt");
+        choiceMotherboard.setValue("Ikke valgt");
+        choiceRam.setValue("Ikke valgt");
+        choiceHarddisk.setValue("Ikke valgt");
+        choicePower.setValue("Ikke valgt");
+    }
+
+    @FXML
+    private void saveFile() {
+        FileHandler.saveFileData(stage, dRegister);
     }
 
     @FXML
