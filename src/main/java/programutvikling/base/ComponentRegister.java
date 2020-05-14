@@ -22,7 +22,7 @@ public class ComponentRegister implements Serializable {
 
     public ComponentRegister() {
 
-        addComponent(new Component("Kabinett", "NXT", "Asus",50,"20-10-3008",8000));
+        addComponent(new Component("Kabinett", "NXT", "Asus",50,"20-10-2008",8000));
         addComponent(new Component("Hovedkort", "MH42EX","Kingston",400,"22-02-2010",2000));
         addComponent(new Component("Prosessor", "I7 7700K","Intel",100,"03-03-2003",500));
         addComponent(new Component("Ram", "16GB DDR5", "Corsair",50,"20-10-2018",8000));

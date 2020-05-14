@@ -37,10 +37,6 @@ public class DataRegister implements Serializable {
         dRegister.add(d);
     }
 
-    public void updateDataList(TableView<Data> tblKomponent) {
-        attachTableView(tblKomponent);
-    }
-
     public void attachTableView(TableView tv) {
         tv.setItems(dRegister);
     }

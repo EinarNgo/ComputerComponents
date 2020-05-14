@@ -15,7 +15,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
 import programutvikling.base.ComponentRegister;
-import programutvikling.base.RegistrerComponent;
 import programutvikling.controllers.controllersHelper.FileHandler;
 import programutvikling.controllers.controllersHelper.editController;
 import programutvikling.controllers.controllersHelper.registerController;
