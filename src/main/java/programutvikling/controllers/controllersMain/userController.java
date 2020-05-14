@@ -10,15 +10,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
 import programutvikling.base.ComponentRegister;
 import programutvikling.base.Data;
 import programutvikling.base.DataRegister;
+import programutvikling.controllers.controllersHelper.Dialogs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +40,7 @@ public class userController {
     TextArea txtLog, txtSammendrag;
     List<Component> textArea = new ArrayList<>();
     private Stage stage;
+    private Dialogs dialogs;
 
     public userController() {
 
@@ -141,15 +140,33 @@ public class userController {
 
     @FXML
     private void btnAdd() {
-        Data d = createData();
-        dRegister.addData(d);
-        System.out.println(choiceCase.getValue());
-        choiceCase.setValue("Ikke valgt");
-        choiceProsessor.setValue("Ikke valgt");
-        choiceMotherboard.setValue("Ikke valgt");
-        choiceRam.setValue("Ikke valgt");
-        choiceHarddisk.setValue("Ikke valgt");
-        choicePower.setValue("Ikke valgt");
+        System.out.println(choiceCase.getValue().equals("Ikke valgt"));
+        if (choiceCase.getValue().equals("Ikke valgt") && choiceProsessor.getValue().equals("Ikke valgt")
+            && choiceMotherboard.getValue().equals("Ikke valgt") && choiceRam.getValue().equals("Ikke valgt")
+            && choiceHarddisk.getValue().equals("Ikke valgt") && choicePower.getValue().equals("Ikke valgt")) {
+            dialogs.showErrorDialog("Må velge komponenter, kan ikke opprette tom produkt");
+        } else {
+            Data d = createData();
+            dRegister.addData(d);
+            System.out.println(choiceCase.getValue());
+            choiceCase.setValue("Ikke valgt");
+            choiceProsessor.setValue("Ikke valgt");
+            choiceMotherboard.setValue("Ikke valgt");
+            choiceRam.setValue("Ikke valgt");
+            choiceHarddisk.setValue("Ikke valgt");
+            choicePower.setValue("Ikke valgt");
+        }
+    }
+
+    @FXML
+    private void btnSlett() {
+        int valgtIndex = tblData.getSelectionModel().getSelectedIndex();
+        if (valgtIndex >=0) {
+            System.out.println(tblData.getSelectionModel().getSelectedIndex());
+            dRegister.removeInded(valgtIndex);
+        } else {
+            dialogs.showNoSelectDialog("Please select a component in the table.");
+        }
     }
 
     private void listedChange(ChoiceBox<String> cBox, String text) {

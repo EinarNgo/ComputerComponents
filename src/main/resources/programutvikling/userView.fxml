@@ -22,7 +22,7 @@
    <center>
       <AnchorPane prefHeight="290.0" prefWidth="676.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="113.0" layoutY="35.0" prefHeight="27.0" prefWidth="156.0" text="Build a computer">
+            <Label layoutX="120.0" layoutY="35.0" prefHeight="27.0" prefWidth="156.0" text="Build a computer">
                <font>
                   <Font size="20.0" />
                </font>
@@ -59,14 +59,14 @@
             </GridPane>
             <TextArea fx:id="txtLog" editable="false" layoutX="215.0" layoutY="181.0" prefHeight="123.0" prefWidth="178.0" />
             <TextArea fx:id="txtSammendrag" editable="false" layoutX="214.0" layoutY="83.0" prefHeight="104.0" prefWidth="178.0" />
-            <TableView fx:id="tblData" layoutX="1.0" layoutY="339.0" minHeight="-Infinity" prefHeight="182.0" prefWidth="387.0">
+            <TableView fx:id="tblData" layoutX="7.0" layoutY="339.0" minHeight="-Infinity" prefHeight="182.0" prefWidth="381.0">
                <columns>
-                  <TableColumn fx:id="ColumnaCase" prefWidth="49.0" resizable="false" text="Case">
+                  <TableColumn fx:id="ColumnaCase" prefWidth="44.0" resizable="false" text="Case">
                      <cellValueFactory>
                         <PropertyValueFactory property="komponent" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn fx:id="ColumnMotherboard" prefWidth="59.0" resizable="false" text="Motherboard">
+                  <TableColumn fx:id="ColumnMotherboard" prefWidth="71.0" resizable="false" text="Motherboard">
                      <cellValueFactory>
                         <PropertyValueFactory property="navn" />
                      </cellValueFactory>
@@ -76,24 +76,26 @@
                         <PropertyValueFactory property="produsent" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn fx:id="ColumnRam" prefWidth="38.0" resizable="false" text="Ram">
+                  <TableColumn fx:id="ColumnRam" prefWidth="43.0" resizable="false" text="Ram">
                      <cellValueFactory>
                         <PropertyValueFactory property="vekt" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn fx:id="ColumnHarddisk" prefWidth="59.0" resizable="false" text="Harddisk">
+                  <TableColumn fx:id="ColumnHarddisk" prefWidth="64.0" resizable="false" text="Harddisk">
                      <cellValueFactory>
                         <PropertyValueFactory property="lansert" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn fx:id="ColumnPower" prefWidth="51.0" resizable="false" text="Power">
+                  <TableColumn fx:id="ColumnPower" prefWidth="53.0" resizable="false" text="Power">
                      <cellValueFactory>
                         <PropertyValueFactory property="pris" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn fx:id="ColumnPris" prefWidth="67.0" text="Pris" />
+                  <TableColumn fx:id="ColumnPris" prefWidth="48.0" text="Pris" />
                </columns>
             </TableView>
+            <Button layoutX="323.0" layoutY="301.0" mnemonicParsing="false" onAction="#btnSlett" prefHeight="34.0" prefWidth="61.0" text="Slett" />
+            <Button layoutX="258.0" layoutY="301.0" mnemonicParsing="false" text="Button" />
          </children>
       </AnchorPane>
    </center>
@@ -103,14 +105,10 @@
             <MenuBar prefHeight="27.0" prefWidth="381.0">
               <menus>
                 <Menu mnemonicParsing="false" text="Back to meny" />
-                <Menu mnemonicParsing="false" text="Edit">
+                <Menu mnemonicParsing="false" text="Filbehandling">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                        <MenuItem mnemonicParsing="false" text="Open file" />
+                    <MenuItem mnemonicParsing="false" text="Save file" />
                   </items>
                 </Menu>
               </menus>
