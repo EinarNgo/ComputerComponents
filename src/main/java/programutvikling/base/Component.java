@@ -86,6 +86,7 @@ public class Component implements Serializable {
         this.vekt.set(vekt);
     }
 
+    //TODO
     public String getLanser() {
         return lansert.getValue();
     }
