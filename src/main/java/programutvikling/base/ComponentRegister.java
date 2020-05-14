@@ -22,18 +22,18 @@ public class ComponentRegister implements Serializable {
 
     public ComponentRegister() {
 
-        addComponent(new Component("Case", "en", "Asus",50,"20.10.2018",8000));
-        addComponent(new Component("Motherboard", "to","Kingston",400,"2.2.2010",2000));
-        addComponent(new Component("Prosessor", "tre","Rex",100,"3.3.2003",500));
-        addComponent(new Component("Ram", "fire", "Asus",50,"20.10.2018",8000));
-        addComponent(new Component("Harddisk", "fem","Kingston",400,"2.2.2010",2000));
-        addComponent(new Component("Power", "seks","Rex",100,"3.3.2003",500));
-        addComponent(new Component("Case", "syv", "Asus",50,"20.10.2018",8000));
-        addComponent(new Component("Motherboard", "åtte","Kingston",400,"2.2.2010",2000));
-        addComponent(new Component("Prosessor", "ni","Rex",100,"3.3.2003",500));
-        addComponent(new Component("Ram", "ti", "Asus",50,"20.10.2018",8000));
-        addComponent(new Component("Harddisk", "elleve","Kingston",400,"2.2.2010",2000));
-        addComponent(new Component("Power", "tolv","Rex",100,"3.3.2003",500));
+        addComponent(new Component("Case", "en", "Asus",50,"20-10-3008",8000));
+        addComponent(new Component("Motherboard", "to","Kingston",400,"22-02-2010",2000));
+        addComponent(new Component("Prosessor", "tre","Rex",100,"03-03-2003",500));
+        addComponent(new Component("Ram", "fire", "Asus",50,"20-10-2018",8000));
+        addComponent(new Component("Harddisk", "fem","Kingston",400,"02-02-2010",2000));
+        addComponent(new Component("Power", "seks","Rex",100,"30-03-2003",500));
+        addComponent(new Component("Case", "syv", "Asus",50,"20-10-2018",8000));
+        addComponent(new Component("Motherboard", "åtte","Kingston",400,"20-02-2010",2000));
+        addComponent(new Component("Prosessor", "ni","Rex",100,"30-03-2003",500));
+        addComponent(new Component("Ram", "ti", "Asus",50,"20-10-2018",8000));
+        addComponent(new Component("Harddisk", "elleve","Kingston",400,"20-02-2010",2000));
+        addComponent(new Component("Power", "tolv","Rex",100,"20-02-2003",500));
 
 
     }

@@ -19,7 +19,11 @@ import programutvikling.base.DataRegister;
 import programutvikling.controllers.controllersHelper.Dialogs;
 import programutvikling.controllers.controllersHelper.FileHandler;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class userController {

@@ -18,19 +18,20 @@ public class Component implements Serializable {
     private transient SimpleStringProperty lansert;
     private transient SimpleIntegerProperty pris;
 
-    public Component(String komponent, String navn,String produsent, int vekt, String lanser, int pris){
+    public Component(String komponent, String navn,String produsent, int vekt, String lansert, int pris){
 
         ComponentValidator.navnInput(navn);
         ComponentValidator.komponentInput(komponent);
         ComponentValidator.produsentInput(produsent);
         ComponentValidator.vektInput(Integer.toString(vekt));
         ComponentValidator.prisInput(Integer.toString(pris));
+        ComponentValidator.datoInput(lansert);
 
         this.komponent = new SimpleStringProperty(komponent);
         this.navn = new SimpleStringProperty(navn);
         this.produsent = new SimpleStringProperty(produsent);
         this.vekt = new SimpleIntegerProperty(vekt);
-        this.lansert = new SimpleStringProperty(lanser);
+        this.lansert = new SimpleStringProperty(lansert);
         this.pris = new SimpleIntegerProperty(pris);
     }
 
@@ -96,6 +97,7 @@ public class Component implements Serializable {
     }
 
     public final void setLansert(String lansert) {
+        ComponentValidator.datoInput(lansert);
         this.lansert.set(lansert);
     }
 
