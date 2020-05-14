@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ProgSemesteroppgave:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,8 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="690d8b4d-8996-4494-bbb8-94c60f20b59e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/fileHandler/FileOpenerTxt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/fileHandler/FileOpenerTxt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/fileHandler/InvalidPersonFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/fileHandler/InvalidComponentFormatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +85,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/programutvikling" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.Unnamed">
+  <component name="RunManager" selected="Maven.Semesteroppgave">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="programutvikling.App" />
       <module name="semesteroppgave" />
@@ -107,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+    <configuration name="Semesteroppgave" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
         <option name="myRunnerSettings" />
@@ -166,7 +171,7 @@
     <list>
       <item itemvalue="Application.MainApp" />
       <item itemvalue="Application.App" />
-      <item itemvalue="Maven.Unnamed" />
+      <item itemvalue="Maven.Semesteroppgave" />
     </list>
     <recent_temporary>
       <list>
@@ -212,9 +217,10 @@
       <screen x="0" y="23" width="1440" height="816" />
     </state>
     <state x="320" y="91" key="#Project_Structure/0.23.1440.816@0.23.1440.816" timestamp="1588364305667" />
-    <state x="245" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588461688856">
+    <state x="245" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589499309206">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="245" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589499309206" />
     <state x="245" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588461688856" />
     <state x="184" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.816@0.23.1440.816" timestamp="1588364677906" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1589410014333">
@@ -229,28 +235,32 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2660" y="261" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588593151266" />
-    <state width="1354" height="252" key="GridCell.Tab.0.bottom" timestamp="1589497347852">
+    <state width="1353" height="252" key="GridCell.Tab.0.bottom" timestamp="1589499438980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1354" height="252" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589497347852" />
+    <state width="1353" height="252" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1589498176698" />
+    <state width="1353" height="252" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589499438980" />
     <state width="1340" height="265" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939800" />
     <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1354" height="252" key="GridCell.Tab.0.center" timestamp="1589497347852">
+    <state width="1353" height="252" key="GridCell.Tab.0.center" timestamp="1589499438980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1354" height="252" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589497347852" />
+    <state width="1353" height="252" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1589498176698" />
+    <state width="1353" height="252" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589499438980" />
     <state width="1340" height="265" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1354" height="252" key="GridCell.Tab.0.left" timestamp="1589497347852">
+    <state width="1353" height="252" key="GridCell.Tab.0.left" timestamp="1589499438980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1354" height="252" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589497347852" />
+    <state width="1353" height="252" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1589498176698" />
+    <state width="1353" height="252" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589499438980" />
     <state width="1340" height="265" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
-    <state width="1354" height="252" key="GridCell.Tab.0.right" timestamp="1589497347852">
+    <state width="1353" height="252" key="GridCell.Tab.0.right" timestamp="1589499438980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1354" height="252" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589497347852" />
+    <state width="1353" height="252" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@-1920.0.1920.1040" timestamp="1589498176698" />
+    <state width="1353" height="252" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1589499438980" />
     <state width="1340" height="265" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1588517939799" />
     <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1588592307976" />
     <state width="938" height="348" key="GridCell.Tab.1.bottom" timestamp="1589401532134">
