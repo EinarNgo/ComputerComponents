@@ -116,8 +116,8 @@
          <children>
             <MenuBar prefHeight="27.0" prefWidth="381.0">
                <menus>
-                  <Menu mnemonicParsing="false" text="Back to meny" />
-                  <Menu mnemonicParsing="false" text="Filehandler">
+                  <Menu mnemonicParsing="false" text="Tilbake til hovedmeny" />
+                  <Menu mnemonicParsing="false" text="Filbehandling">
                      <items>
                         <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open file" />
                         <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Save file" />
@@ -130,6 +130,6 @@
       </AnchorPane>
    </top>
     <stylesheets>
-        <URL value="@css/admin.css" />
+        <URL value="@fxml/admin.css" />
     </stylesheets>
 </BorderPane>

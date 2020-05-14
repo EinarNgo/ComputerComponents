@@ -17,7 +17,7 @@ public class DataRegister implements Serializable {
     private transient ObservableList<Data> dRegister = FXCollections.observableArrayList();
 
     public DataRegister() {
-        addData(new Data("Ram","en","to","tre","fire","fem", 1));
+        addData(new Data("Tower","B450-F","I7 7900K","16GB","1TB SSD","80W Gold", 30000));
 
     }
 

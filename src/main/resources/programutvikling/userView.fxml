@@ -23,14 +23,14 @@
    <center>
       <AnchorPane prefHeight="521.0" prefWidth="297.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="115.0" layoutY="45.0" prefHeight="30.0" prefWidth="164.0" text="Build a computer">
+            <Label layoutX="115.0" layoutY="45.0" prefHeight="30.0" prefWidth="164.0" text="Bygg din egen PC">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
             <GridPane layoutX="91.0" layoutY="92.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
               </columnConstraints>
               <rowConstraints>
@@ -43,29 +43,29 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Case" />
-                  <Label text="Motherboard" GridPane.rowIndex="1" />
+                  <Label text="Kabinett" />
+                  <Label text="Hovedkort" GridPane.rowIndex="1" />
                   <Label text="Prosessor" GridPane.rowIndex="2" />
                   <Label text="Ram" GridPane.rowIndex="3" />
                   <Label text="Harddisk" GridPane.rowIndex="4" />
-                  <Label text="Power" GridPane.rowIndex="5" />
+                  <Label text="Strømforsyning" GridPane.rowIndex="5" />
                   <ChoiceBox fx:id="choiceCase" prefWidth="150.0" GridPane.columnIndex="1" />
                   <ChoiceBox fx:id="choiceMotherboard" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <ChoiceBox fx:id="choiceProsessor" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <ChoiceBox fx:id="choiceRam" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <ChoiceBox fx:id="choiceHarddisk" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <ChoiceBox fx:id="choicePower" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <Button mnemonicParsing="false" onAction="#btnAdd" prefHeight="41.0" prefWidth="103.0" text="Add" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button mnemonicParsing="false" onAction="#btnAdd" prefHeight="41.0" prefWidth="103.0" text="Legg til" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                </children>
             </GridPane>
             <TableView fx:id="tblData" layoutX="8.0" layoutY="339.0" minHeight="-Infinity" prefHeight="182.0" prefWidth="743.0">
                <columns>
-                  <TableColumn fx:id="ColumnaCase" prefWidth="106.0" resizable="false" text="Case">
+                  <TableColumn fx:id="ColumnaCase" prefWidth="106.0" resizable="false" text="Kabinett">
                      <cellValueFactory>
                         <PropertyValueFactory property="komponent" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn fx:id="ColumnMotherboard" prefWidth="106.0" resizable="false" text="Motherboard">
+                  <TableColumn fx:id="ColumnMotherboard" prefWidth="106.0" resizable="false" text="Hovedkort">
                      <cellValueFactory>
                         <PropertyValueFactory property="navn" />
                      </cellValueFactory>
@@ -85,7 +85,7 @@
                         <PropertyValueFactory property="lansert" />
                      </cellValueFactory>
                   </TableColumn>
-                  <TableColumn fx:id="ColumnPower" minWidth="0.0" prefWidth="106.0" resizable="false" text="Power">
+                  <TableColumn fx:id="ColumnPower" minWidth="0.0" prefWidth="106.0" resizable="false" text="Strømforsyning">
                      <cellValueFactory>
                         <PropertyValueFactory property="pris" />
                      </cellValueFactory>
@@ -99,7 +99,6 @@
             <Label layoutX="590.0" layoutY="75.0" text="Sammendrag" />
             <HBox layoutX="380.0" layoutY="302.0" prefHeight="35.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" text="Button" />
                   <Button mnemonicParsing="false" onAction="#btnSlett" prefHeight="34.0" prefWidth="61.0" text="Slett" />
                </children>
             </HBox>
@@ -111,7 +110,7 @@
          <children>
             <MenuBar prefHeight="27.0" prefWidth="759.0">
               <menus>
-                <Menu mnemonicParsing="false" text="Back to meny" />
+                <Menu mnemonicParsing="false" text="Tilbake to hovedmeny" />
                 <Menu mnemonicParsing="false" text="Filbehandling">
                   <items>
                         <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open file" />
@@ -125,6 +124,6 @@
       </AnchorPane>
    </top>
     <stylesheets>
-        <URL value="@css/user.css" />
+        <URL value="@fxml/user.css" />
     </stylesheets>
 </BorderPane>

@@ -44,7 +44,7 @@ public class editController {
 
             Dialogs.showSuccessDialog("Komponeneten er endret");
         } catch (NumberFormatException nfe) {
-            Dialogs.showErrorDialog("Please only number in Vekt and Pris");
+            Dialogs.showErrorDialog("Kun tall i Vekt and Pris");
             temp = false;
 
         } catch (IllegalArgumentException e) {

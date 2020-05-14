@@ -52,13 +52,10 @@ public class adminController {
 
 
 
-    private RegistrerComponent registrerComponent;
     private Dialogs dialogs;
     private Stage stage;
 
     public adminController() {
-        // Add some sample data.
-
     }
 
     @FXML
@@ -117,7 +114,7 @@ public class adminController {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader();
-            root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/registerKundeView.fxml").openStream());
+            root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/registerView.fxml").openStream());
 
             registerController controller = fxmlLoader.getController();
 
@@ -158,7 +155,7 @@ public class adminController {
             Parent root = null;
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader();
-                root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/editKundeView.fxml").openStream());
+                root = fxmlLoader.load(getClass().getResource("/programutvikling/controllers/editView.fxml").openStream());
 
                 // Får tak i controlleren og overfører referanse til person-objektet
                 editController controller = fxmlLoader.getController();
@@ -178,7 +175,7 @@ public class adminController {
             editKomponentStage.initModality(Modality.WINDOW_MODAL);
             editKomponentStage.show();
         } else {
-            dialogs.showNoSelectDialog("Please select a component in the table.");
+            dialogs.showNoSelectDialog("Vennligst velg en komponenten i tabellen");
         }
     }
 

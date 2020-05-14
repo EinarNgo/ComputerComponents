@@ -14,21 +14,17 @@
       <AnchorPane prefHeight="290.0" prefWidth="405.0" BorderPane.alignment="CENTER">
          <children>
             <Button layoutX="123.0" layoutY="244.0" mnemonicParsing="false" onAction="#btnAdmin" prefHeight="27.0" prefWidth="135.0" text="Admin" />
-            <Button layoutX="123.0" layoutY="285.0" mnemonicParsing="false" onAction="#btnUser" prefHeight="27.0" prefWidth="136.0" text="User" />
-            <Label layoutX="118.0" layoutY="120.0" prefHeight="28.0" prefWidth="146.0" text="Build a computer" textAlignment="CENTER">
+            <Button layoutX="123.0" layoutY="285.0" mnemonicParsing="false" onAction="#btnUser" prefHeight="27.0" prefWidth="136.0" text="Bruker" />
+            <Label layoutX="118.0" layoutY="120.0" prefHeight="28.0" prefWidth="146.0" text="Bygg din egen PC" textAlignment="CENTER">
                <font>
                   <Font size="19.0" />
                </font>
             </Label>
-            <ImageView fitHeight="135.0" fitWidth="200.0" layoutX="91.0" layoutY="357.0">
-               <image>
-                  <Image url="@../../../../../../../Desktop/Skjermbilde.PNG" />
-               </image>
-            </ImageView>
+
          </children>
       </AnchorPane>
    </center>
    <stylesheets>
-      <URL value="@css/start.css"/>
+      <URL value="@fxml/start.css"/>
    </stylesheets>
 </BorderPane>

@@ -51,9 +51,6 @@ public class userController {
 
     }
 
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
 
     @FXML
     private void initialize() {
@@ -66,19 +63,19 @@ public class userController {
 
         summaryText = "";
 
-        fillChoicebox("Case",choiceCase);
+        fillChoicebox("Kabinett",choiceCase);
         fillChoicebox("Prosessor",choiceProsessor);
-        fillChoicebox("Motherboard",choiceMotherboard);
+        fillChoicebox("Hovedkort",choiceMotherboard);
         fillChoicebox("Ram",choiceRam);
         fillChoicebox("Harddisk",choiceHarddisk);
-        fillChoicebox("Power",choicePower);
+        fillChoicebox("Strømforsyning",choicePower);
 
-        listedChange(choiceCase, "Case");
+        listedChange(choiceCase, "Kabinett");
         listedChange(choiceProsessor, "Prosessor");
-        listedChange(choiceMotherboard, "Motherboard");
+        listedChange(choiceMotherboard, "Hovedkort");
         listedChange(choiceRam, "Ram");
         listedChange(choiceHarddisk, "Harddisk");
-        listedChange(choicePower, "Power");
+        listedChange(choicePower, "Strømforsyning");
 
 
         ColumnaCase.setCellValueFactory(cellData -> cellData.getValue().aCaseProperty());
@@ -89,10 +86,8 @@ public class userController {
         ColumnPower.setCellValueFactory(cellData -> cellData.getValue().powerProperty());
         ColumnPris.setCellValueFactory(cellData -> cellData.getValue().prisProperty().asString());
 
-        showData(null);
 
-        tblData.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> showData(newValue));
+
 
     }
 
@@ -108,30 +103,7 @@ public class userController {
 
 
 
-    private void showData(Data data) {
-        if (data != null) {
-            // Fill the labels with info from the person object.
-            /*
-            txtKomponent.setText(component.getKomponent());
-            txtNavn.setText(component.getNavn());
-            txtProdusent.setText(component.getProdusent());
-            txtVekt.setText(Integer.toString(component.getVekt()));
-            txtLansert.setText(component.getLanser());
-            txtPris.setText(Integer.toString(component.getPris()));
 
-             */
-        } else {
-            /*
-            txtKomponent.setText("");
-            txtNavn.setText("");
-            txtProdusent.setText("");
-            txtVekt.setText("");
-            txtLansert.setText("");
-            txtPris.setText("");
-
-             */
-        }
-    }
 
     @FXML
     private void openFile() {
@@ -163,10 +135,10 @@ public class userController {
     @FXML
     private void btnAdd() {
         System.out.println(choiceCase.getValue().equals("Ikke valgt"));
-        if (choiceCase.getValue().equals("Ikke valgt") && choiceProsessor.getValue().equals("Ikke valgt")
-            && choiceMotherboard.getValue().equals("Ikke valgt") && choiceRam.getValue().equals("Ikke valgt")
-            && choiceHarddisk.getValue().equals("Ikke valgt") && choicePower.getValue().equals("Ikke valgt")) {
-            dialogs.showErrorDialog("Må velge komponenter, kan ikke opprette tom produkt");
+        if (choiceCase.getValue().equals("Ikke valgt") || choiceProsessor.getValue().equals("Ikke valgt")
+                || choiceMotherboard.getValue().equals("Ikke valgt") || choiceRam.getValue().equals("Ikke valgt")
+                || choiceHarddisk.getValue().equals("Ikke valgt") || choicePower.getValue().equals("Ikke valgt")) {
+            dialogs.showErrorDialog("Vennligst velg alle komponentene.");
         } else {
             Data d = createData();
             dRegister.addData(d);
@@ -187,7 +159,7 @@ public class userController {
             System.out.println(tblData.getSelectionModel().getSelectedIndex());
             dRegister.removeInded(valgtIndex);
         } else {
-            dialogs.showNoSelectDialog("Please select a component in the table.");
+            dialogs.showNoSelectDialog("Vennligst velg en komponent i tabellen");
         }
     }
 

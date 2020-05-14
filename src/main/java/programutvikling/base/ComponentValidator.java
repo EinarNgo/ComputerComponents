@@ -15,7 +15,7 @@ public class ComponentValidator {
         }
 
         if (komponent.isBlank() && komponent.matches("[^\\d]+")) {
-            throw new IllegalArgumentException("Komponent kan ikke være tom eller inneholde tall");
+            throw new IllegalArgumentException("Komponent kan ikke være tom");
         }
     }
 
