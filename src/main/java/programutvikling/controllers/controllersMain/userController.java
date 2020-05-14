@@ -11,10 +11,13 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 import programutvikling.base.Component;
 import programutvikling.base.ComponentRegister;
+import programutvikling.base.Data;
 import programutvikling.base.DataRegister;
 
 import java.util.ArrayList;
@@ -27,8 +30,13 @@ public class userController {
     private ComponentRegister cRegister = startController.getcRegister();
     private DataRegister dRegister = startController.getdRegister();
 
+    @FXML
+    private TableView<Data> tblData;
+    @FXML
+    private TableColumn<Data, String> ColumnaCase, ColumnMotherboard, ColumnProsessor, ColumnRam, ColumnHarddisk, ColumnPower, ColumnPris;
 
     private String summaryText = "", logText="";
+    private int pris = 0;
 
     @FXML
     TextArea txtLog, txtSammendrag;
@@ -50,6 +58,8 @@ public class userController {
     }
 
     private void update() {
+        updateDataList();
+
         summaryText = "";
 
         fillChoicebox("Case",choiceCase);
@@ -65,6 +75,58 @@ public class userController {
         listedChange(choiceRam, "Ram");
         listedChange(choiceHarddisk, "Harddisk");
         listedChange(choicePower, "Power");
+
+
+        ColumnaCase.setCellValueFactory(cellData -> cellData.getValue().aCaseProperty());
+        ColumnProsessor.setCellValueFactory(cellData -> cellData.getValue().prosessorProperty());
+        ColumnMotherboard.setCellValueFactory(cellData -> cellData.getValue().motherboardProperty());
+        ColumnRam.setCellValueFactory(cellData -> cellData.getValue().ramProperty());
+        ColumnHarddisk.setCellValueFactory(cellData -> cellData.getValue().harddiskProperty());
+        ColumnPower.setCellValueFactory(cellData -> cellData.getValue().powerProperty());
+        ColumnPris.setCellValueFactory(cellData -> cellData.getValue().prisProperty().asString());
+
+        showData(null);
+
+        tblData.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> showData(newValue));
+
+    }
+
+    private void updateDataList() {
+        dRegister.attachTableView(tblData);
+    }
+
+
+    private Data createData() {
+
+        return new Data(choiceCase.getValue(), choiceMotherboard.getValue() ,choiceProsessor.getValue(), choiceRam.getValue(), choiceHarddisk.getValue(),choicePower.getValue(), pris);
+    }
+
+
+
+    private void showData(Data data) {
+        if (data != null) {
+            // Fill the labels with info from the person object.
+            /*
+            txtKomponent.setText(component.getKomponent());
+            txtNavn.setText(component.getNavn());
+            txtProdusent.setText(component.getProdusent());
+            txtVekt.setText(Integer.toString(component.getVekt()));
+            txtLansert.setText(component.getLanser());
+            txtPris.setText(Integer.toString(component.getPris()));
+
+             */
+        } else {
+            /*
+            txtKomponent.setText("");
+            txtNavn.setText("");
+            txtProdusent.setText("");
+            txtVekt.setText("");
+            txtLansert.setText("");
+            txtPris.setText("");
+
+             */
+        }
     }
 
     @FXML
@@ -75,6 +137,19 @@ public class userController {
         window.setTitle("Startmenu");
         window.setScene(newscene);
         window.show();
+    }
+
+    @FXML
+    private void btnAdd() {
+        Data d = createData();
+        dRegister.addData(d);
+        System.out.println(choiceCase.getValue());
+        choiceCase.setValue("Ikke valgt");
+        choiceProsessor.setValue("Ikke valgt");
+        choiceMotherboard.setValue("Ikke valgt");
+        choiceRam.setValue("Ikke valgt");
+        choiceHarddisk.setValue("Ikke valgt");
+        choicePower.setValue("Ikke valgt");
     }
 
     private void listedChange(ChoiceBox<String> cBox, String text) {
@@ -94,7 +169,7 @@ public class userController {
 
                                      summaryText = "Din pc: ";
                                      logText = "";
-                                     int pris = 0;
+                                     pris = 0;
                                      for (Component i : textArea) {
                                          logText +=
                                                  "Valgt komponent: " + i.getNavn() +

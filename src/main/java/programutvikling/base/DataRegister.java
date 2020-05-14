@@ -17,7 +17,7 @@ public class DataRegister implements Serializable {
     private transient ObservableList<Data> dRegister = FXCollections.observableArrayList();
 
     public DataRegister() {
-
+        addData(new Data("Ram","en","to","tre","fire","fem", 1));
 
     }
 
@@ -33,7 +33,7 @@ public class DataRegister implements Serializable {
         dRegister.remove(i);
     }
 
-    public void addComponent(Data d) {
+    public void addData(Data d) {
         dRegister.add(d);
     }
 
