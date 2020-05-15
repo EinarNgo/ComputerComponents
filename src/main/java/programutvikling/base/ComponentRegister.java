@@ -16,12 +16,22 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class ComponentRegister implements Serializable {
+    /**
+     * Klasse for å håndtere alle komponentene som kommer inn og legger den i liste
+     */
+
     private static final long serialVersionUID = 1;
 
+    /**
+     * Oppretter en List med Komponenter som klasse
+     */
     private transient ObservableList<Component> cRegister = FXCollections.observableArrayList();
 
     public ComponentRegister() {
 
+        /**
+         * Oppretter eksempel data
+         */
         addComponent(new Component("Kabinett", "NXT", "Asus",50,"20-10-2008",8000));
         addComponent(new Component("Hovedkort", "MH42EX","Kingston",400,"22-02-2010",2000));
         addComponent(new Component("Prosessor", "I7 7700K","Intel",100,"03-03-2003",500));
@@ -38,18 +48,33 @@ public class ComponentRegister implements Serializable {
 
     }
 
+    /**
+     * Metode for å hente liste
+     * @return
+     */
     public List<Component> getRegister() {
         return cRegister;
     }
 
+    /**
+     * Metode for å fjerne alt data fra listen
+     */
     public void removeAll() {
         cRegister.clear();
     }
 
+    /**
+     * Metode for å slette valgte verdi i liste
+     * @param i
+     */
     public void removeInded(int i) {
         cRegister.remove(i);
     }
 
+    /**
+     * Metode for å legge til komponenter i registeret
+     * @param c
+     */
     public void addComponent(Component c) {
         cRegister.add(c);
     }
@@ -58,6 +83,11 @@ public class ComponentRegister implements Serializable {
         attachTableView(tblKomponent);
     }
 
+    /**
+     * Metode for å finne den valgt komponent i listen med navn
+     * @param name
+     * @return
+     */
     public List<Component> searchRegisterByName(String name) {
         List<Component> components = new ArrayList<>();
         Pattern pattern = Pattern.compile(name, Pattern.CASE_INSENSITIVE);
@@ -70,7 +100,6 @@ public class ComponentRegister implements Serializable {
             }
         }
 
-        // Hvis vi kommer hit betyr det at vi ikke fant noen personer
         return components;
     }
 
@@ -93,6 +122,9 @@ public class ComponentRegister implements Serializable {
         tv.setItems(cRegister);
     }
 
+    /**
+     * Filtrering for de ulike kolonene
+     */
     public ObservableList<Component> filterByComponent(String component) {
         return cRegister.stream().
                 filter(p -> p.getKomponent().toLowerCase().
@@ -128,6 +160,10 @@ public class ComponentRegister implements Serializable {
                 collect(Collectors.toCollection(FXCollections::observableArrayList));
     }
 
+    /**
+     * Metoder til å skrive og lese fil
+     * ToString metoden forklarer hvordan stringen skal være når den skrives til fil
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

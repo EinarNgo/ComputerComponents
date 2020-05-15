@@ -8,6 +8,9 @@ import programutvikling.base.Component;
 
 public class editController {
 
+    /**
+     * Kontroller for Edit view der du har mulighet til å endre komponenter du har i ComponentRegister
+     */
     private Component Komponent;
 
     @FXML
@@ -17,6 +20,9 @@ public class editController {
     private TextField txtLansert;
 
 
+    /**
+     * Metode for å sette verdier i tekstboksene
+     */
     public void setKomponent(Component Komponent) {
         this.Komponent = Komponent;
 
@@ -29,6 +35,9 @@ public class editController {
     }
 
 
+    /**
+     * Metode for å endre verdier i registre
+     */
     @FXML
     private void editKomponent() {
 
@@ -59,6 +68,9 @@ public class editController {
     }
 
 
+    /**
+     * Metode for å logge vinduet som åpner
+     */
     private void closeWindow() {
         Stage myStage = (Stage) txtKomponent.getScene().getWindow();
         myStage.close();

@@ -3,7 +3,6 @@ package programutvikling.controllers.controllersHelper;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import programutvikling.base.ComponentRegister;
-import programutvikling.base.Data;
 import programutvikling.base.DataRegister;
 import programutvikling.fileHandler.*;
 
@@ -13,6 +12,10 @@ import java.io.IOException;
 public class FileHandler {
     private enum DialogMode {Open, Save}
 
+    /**
+     * Save metode for Komponent godtar både txt og jobj
+     * @param register
+     */
     public static void saveFileComponent(Stage stage, ComponentRegister register) {
         File selectedFile = getFileFromFileChooser(DialogMode.Save, stage);
 
@@ -38,6 +41,10 @@ public class FileHandler {
 
     }
 
+    /**
+     * Open metode for Komponent godtar både txt og jobj
+     * @param register
+     */
     public static void openFileComponent(Stage stage, ComponentRegister register) {
         File selectedFile = getFileFromFileChooser(DialogMode.Open, stage);
 
@@ -61,6 +68,10 @@ public class FileHandler {
         }
     }
 
+    /**
+     * Save metode for Data, godtar både txt og jobj
+     * @param register
+     */
     public static void saveFileData(Stage stage, DataRegister register) {
         File selectedFile = getFileFromFileChooser(DialogMode.Save, stage);
 
@@ -86,6 +97,10 @@ public class FileHandler {
 
     }
 
+    /**
+     * Open metode for Data, godtar både txt og jobj
+     * @param register
+     */
     public static void openFileData(Stage stage, DataRegister register) {
         File selectedFile = getFileFromFileChooser(DialogMode.Open, stage);
 
@@ -109,6 +124,10 @@ public class FileHandler {
         }
     }
 
+    /**
+     * Setter verdiene som er lov å velge i File chooser
+     * @return
+     */
     private static File getFileFromFileChooser(DialogMode mode, Stage stage) {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Velg fil");

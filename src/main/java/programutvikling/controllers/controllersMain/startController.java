@@ -22,6 +22,10 @@ import java.util.ResourceBundle;
 
 public class startController {
 
+    /**
+     * Kontroller for startView
+     */
+
     private static ComponentRegister cRegister = new ComponentRegister();
     private static DataRegister dRegister = new DataRegister();
 
@@ -38,6 +42,9 @@ public class startController {
         this.stage = stage;
     }
 
+    /**
+     * Knapp for å rende adminView
+     */
     @FXML
     private void btnAdmin (ActionEvent event) throws Exception {
         Parent newparent = (Parent) FXMLLoader.load(this.getClass().getResource("/programutvikling/adminView.fxml"));
@@ -49,6 +56,9 @@ public class startController {
         window.show();
     }
 
+    /**
+     * Knapp for å rende userView
+     */
     @FXML
     private void btnUser(ActionEvent event) throws Exception {
         Parent newparent = (Parent) FXMLLoader.load(this.getClass().getResource("/programutvikling/userView.fxml"));

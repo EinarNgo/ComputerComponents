@@ -9,8 +9,10 @@ import java.io.Serializable;
 
 public class Component implements Serializable {
 
+    /**
+     *  Klasse til å håndtere komponentene som kommer inn systemet
+     */
     private static final long serialVersionUID = 1;
-
     private transient SimpleStringProperty komponent;
     private transient SimpleStringProperty navn;
     private transient SimpleStringProperty produsent;
@@ -35,6 +37,10 @@ public class Component implements Serializable {
         this.pris = new SimpleIntegerProperty(pris);
     }
 
+    /**
+     * Getter og setter metoder for Komponent
+     * Setter metodene har også validering for komponentene som blir satt
+     */
     public String getKomponent() {
         return komponent.getValue();
     }
@@ -87,7 +93,6 @@ public class Component implements Serializable {
         this.vekt.set(vekt);
     }
 
-    //TODO
     public String getLanser() {
         return lansert.getValue();
     }
@@ -114,6 +119,10 @@ public class Component implements Serializable {
         this.pris.set(pris);
     }
 
+    /**
+     * Metoder til å skrive og lese fil
+     * ToString metoden forklarer hvordan stringen skal være når den skrives til fil
+     */
     @Override
     public String toString() {
         return String.format("%s;%s;%s;%s;%s;%s",

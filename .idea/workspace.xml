@@ -25,8 +25,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="690d8b4d-8996-4494-bbb8-94c60f20b59e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ReadMe.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/base/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/base/ComponentRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/ComponentRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/base/ComponentValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/ComponentValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/base/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/base/DataRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/base/DataRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/Dialogs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/Dialogs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/editController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/editController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/registerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersHelper/registerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/adminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/startController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/startController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/programutvikling/controllers/controllersMain/userController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

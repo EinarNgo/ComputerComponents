@@ -18,6 +18,9 @@ public class Data implements Serializable {
     private transient SimpleStringProperty power;
     private transient SimpleIntegerProperty pris;
 
+    /**
+     *  Klasse til å håndtere data deler som kommer inn systemet
+     */
     public Data(String aCase, String motherboard, String prosessor, String ram, String harddisk, String power, int pris) {
         this.aCase = new SimpleStringProperty(aCase);
         this.motherboard = new SimpleStringProperty(motherboard);
@@ -28,7 +31,10 @@ public class Data implements Serializable {
         this.pris = new SimpleIntegerProperty(pris);
     }
 
-
+    /**
+     * Getter og setter metoder for Komponent
+     * Setter metodene har også validering for komponentene som blir satt
+     */
     public String getaCase() {
         return aCase.getValue();
     }
@@ -113,6 +119,11 @@ public class Data implements Serializable {
         this.pris.set(pris);
     }
 
+
+    /**
+     * Metoder til å skrive og lese fil
+     * ToString metoden forklarer hvordan stringen skal være når den skrives til fil
+     */
     @Override
     public String toString() {
         return String.format("%s;%s;%s;%s;%s;%s;%s",

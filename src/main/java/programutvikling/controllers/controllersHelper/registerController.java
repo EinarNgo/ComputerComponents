@@ -8,6 +8,9 @@ import programutvikling.base.ComponentRegister;
 
 public class registerController {
 
+    /**
+     * Kontroller for registrerings Viewen
+     */
     private ComponentRegister cRegister;
 
     @FXML
@@ -16,10 +19,17 @@ public class registerController {
     @FXML
     private TextField txtLansert;
 
+    /**
+     * Setter denne listen lik listen i ComponentRegister
+     * @param cRegister
+     */
     public void setKomponent(ComponentRegister cRegister) {
         this.cRegister = cRegister;
     }
 
+    /**
+     * Metode der den prøver å opprette ny komponent og kaster exception ved mislykket forsøk
+     */
     @FXML
     private void registerKomponent() {
         boolean temp = true;
@@ -41,6 +51,10 @@ public class registerController {
         }
     }
 
+    /**
+     * Oppretter ny komponent
+     * @return
+     */
     private Component createComponent() {
 
         return new Component(txtKomponent.getText(), txtNavn.getText() ,txtProdusent.getText(),Integer.parseInt(txtVekt.getText()), txtLansert.getText(),Integer.parseInt(txtPris.getText()));

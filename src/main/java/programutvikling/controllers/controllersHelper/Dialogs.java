@@ -4,6 +4,10 @@ import javafx.scene.control.Alert;
 
 public class Dialogs {
 
+    /**
+     * Dialog for error
+     * @param msg
+     */
     public static void showErrorDialog(String msg) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Feil!");
@@ -13,6 +17,10 @@ public class Dialogs {
         alert.showAndWait();
     }
 
+    /**
+     * Dialog for success
+     * @param msg
+     */
     public static void showSuccessDialog(String msg) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Komponentregister");
@@ -22,6 +30,10 @@ public class Dialogs {
         alert.showAndWait();
     }
 
+    /**
+     * Dialog for ikke valgt element
+     * @param msg
+     */
     public static void showNoSelectDialog(String msg) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("No Selection");

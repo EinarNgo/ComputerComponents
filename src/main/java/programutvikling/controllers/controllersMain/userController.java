@@ -23,6 +23,9 @@ import java.util.List;
 
 public class userController {
 
+    /**
+     * Kontroller for userView
+     */
     @FXML
     ChoiceBox<String> choiceCase, choiceMotherboard, choiceProsessor, choiceRam, choiceHarddisk, choicePower;
     private ComponentRegister cRegister = startController.getcRegister();
@@ -53,6 +56,9 @@ public class userController {
 
     }
 
+    /**
+     * Metode for å oppdatere verdier i Choiceboks og lytter etter forandringer der
+     */
     private void update() {
         updateDataList();
 
@@ -81,9 +87,6 @@ public class userController {
         ColumnPower.setCellValueFactory(cellData -> cellData.getValue().powerProperty());
         ColumnPris.setCellValueFactory(cellData -> cellData.getValue().prisProperty().asString());
 
-
-
-
     }
 
     private void updateDataList() {
@@ -96,10 +99,9 @@ public class userController {
         return new Data(choiceCase.getValue(), choiceMotherboard.getValue() ,choiceProsessor.getValue(), choiceRam.getValue(), choiceHarddisk.getValue(),choicePower.getValue(), pris);
     }
 
-
-
-
-
+    /**
+     * Metode for åpne fil og setter alle Choiceboxs til Ikke valgt
+     */
     @FXML
     private void openFile() {
         FileHandler.openFileData(stage, dRegister);
@@ -112,11 +114,17 @@ public class userController {
         choicePower.setValue("Ikke valgt");
     }
 
+    /**
+     * Lagrer DataRegister listen til fil
+     */
     @FXML
     private void saveFile() {
         FileHandler.saveFileData(stage, dRegister);
     }
 
+    /**
+     * Metode for å rende tilbake til start View
+     */
     @FXML
     private void backToMenu(ActionEvent event) throws Exception {
         Parent newparent = (Parent) FXMLLoader.load(this.getClass().getResource("/programutvikling/startView.fxml"));
@@ -127,6 +135,9 @@ public class userController {
         window.show();
     }
 
+    /**
+     * Knapp som validerer input og legger verdiene i dRegister listen
+     */
     @FXML
     private void btnAdd() {
         System.out.println(choiceCase.getValue().equals("Ikke valgt"));
@@ -147,6 +158,9 @@ public class userController {
         }
     }
 
+    /**
+     * Sletter den valgte verdien i tabellen og i listen
+     */
     @FXML
     private void btnSlett() {
         int valgtIndex = tblData.getSelectionModel().getSelectedIndex();
@@ -158,6 +172,11 @@ public class userController {
         }
     }
 
+    /**
+     * Metode for å lytte etter forandring i Choiceboxes
+     * @param cBox
+     * @param text
+     */
     private void listedChange(ChoiceBox<String> cBox, String text) {
         cBox.getSelectionModel().selectedIndexProperty()
                 .addListener(new ChangeListener<Number>() {
@@ -197,6 +216,11 @@ public class userController {
     }
 
 
+    /**
+     * Metode som henter verdier fra Componentregister og legger den sortert i choiceboxes
+     * @param item
+     * @param cBox
+     */
     private void fillChoicebox(String item, ChoiceBox cBox) {
         List<Component> test = cRegister.searchRegisterByName(item);
         ObservableList<String> temp = FXCollections.observableArrayList();

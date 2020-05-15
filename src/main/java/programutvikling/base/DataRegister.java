@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataRegister implements Serializable {
+
     private static final long serialVersionUID = 1;
 
     private transient ObservableList<Data> dRegister = FXCollections.observableArrayList();
@@ -21,18 +22,32 @@ public class DataRegister implements Serializable {
 
     }
 
+    /**
+     * Metode for å hente liste
+     * @return
+     */
     public List<Data> getRegister() {
         return dRegister;
     }
 
+    /**
+     * Metode for å fjerne alt data fra listen
+     */
     public void removeAll() {
         dRegister.clear();
     }
 
+    /**
+     * Metode for å slette valgte verdi i liste
+     */
     public void removeInded(int i) {
         dRegister.remove(i);
     }
 
+    /**
+     * Metode for å legge til komponenter i registeret
+     * @param d
+     */
     public void addData(Data d) {
         dRegister.add(d);
     }
@@ -41,6 +56,10 @@ public class DataRegister implements Serializable {
         tv.setItems(dRegister);
     }
 
+    /**
+     * Metoder til å skrive og lese fil
+     * ToString metoden forklarer hvordan stringen skal være når den skrives til fil
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

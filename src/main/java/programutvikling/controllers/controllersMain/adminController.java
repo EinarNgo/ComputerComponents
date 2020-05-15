@@ -24,6 +24,10 @@ import java.io.IOException;
 
 public class adminController {
 
+    /**
+     * Kontroller for adminView
+     */
+
     @FXML
     private TableView<Component> tblKomponent;
     @FXML
@@ -48,21 +52,19 @@ public class adminController {
     GridPane registrationBox;
 
     private ComponentRegister cRegister = startController.getcRegister();
-
-
-
     private Dialogs dialogs;
     private Stage stage;
 
     public adminController() {
     }
 
+    /**
+     * Initializer ved start ved å oppdatere listen og legger verdier i tabell
+     */
     @FXML
     private void initialize() {
         updateComponentList();
         kategoriFilter.setValue("Komponent");
-
-
         ColumnKomponent.setCellValueFactory(cellData -> cellData.getValue().komponentProperty());
         ColumnNavn.setCellValueFactory(cellData -> cellData.getValue().navnProperty());
         ColumnProdusent.setCellValueFactory(cellData -> cellData.getValue().produsentProperty());
@@ -76,6 +78,9 @@ public class adminController {
                 (observable, oldValue, newValue) -> showKomponent(newValue));
     }
 
+    /**
+     * Metode for å slette en valgt komponent i tabellen og oppdaterer tabellen
+     */
     @FXML
     private void slettKomponent() {
         int valgtIndex = tblKomponent.getSelectionModel().getSelectedIndex();
@@ -88,6 +93,10 @@ public class adminController {
         }
     }
 
+    /**
+     * Viser komponenter i txtbokser eller fjerner verdiene i tekstboksene avhengig hvilken verdi som blir satt
+     * @param component
+     */
     private void showKomponent(Component component) {
         if (component != null) {
             // Fill the labels with info from the person object.
@@ -107,6 +116,9 @@ public class adminController {
         }
     }
 
+    /**
+     * Metode for å rende registrering View
+     */
     @FXML
     private void registrerKomponent() {
         Parent root = null;
@@ -135,6 +147,9 @@ public class adminController {
         editKomponentStage.show();
     }
 
+    /**
+     * Metode for å åpne fil
+     */
     @FXML
     private void openFile() {
         FileHandler.openFileComponent(stage, cRegister);
@@ -142,11 +157,17 @@ public class adminController {
         updateComponentList();
     }
 
+    /**
+     * Metode for å lukke fil
+     */
     @FXML
     private void saveFile() {
         FileHandler.saveFileComponent(stage, cRegister);
     }
 
+    /**
+     * Metode for å rende endre View
+     */
     @FXML
     private void redigerKomponent() {
         int valgtIndex = tblKomponent.getSelectionModel().getSelectedIndex();
@@ -183,6 +204,9 @@ public class adminController {
         filter();
     }
 
+    /**
+     * Metode for å rende tilbake til start View
+     */
     @FXML
     private void backToMenu(ActionEvent event) throws Exception {
         Parent newparent = (Parent) FXMLLoader.load(this.getClass().getResource("/programutvikling/startView.fxml"));
@@ -204,6 +228,9 @@ public class adminController {
     }
 
 
+    /**
+     * Metode for filtrering av hvilken variabel i komponent
+     */
     private void filter() {
         if(txtSok.getText().isBlank()) {
             updateComponentList();
